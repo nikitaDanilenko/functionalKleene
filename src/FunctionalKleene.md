@@ -83,7 +83,7 @@ Algebraic row functions
 Querying of rows filled with semiring entries at a given position. This
 function returns `zero` whenever the index is not in filled in the row.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 (.!.) :: IdempotentSemiring s => Row s -> Int -> s
 Row s .!. k = s .!!. k where
   []             .!!. _ = zero
