@@ -1,13 +1,13 @@
-\begin{code}
+~~~{.haskell}
 module FunctionalKleene where
-\end{code}
+~~~
 
-\begin{code}
+~~~{.haskell}
 class IdempotentSemiring s where
     (.+.), (.*.)  :: s -> s_ -> s_
     zero, one     :: s
     isZero, isOne :: s -> Bool
-\end{code}
+~~~
 
 > class IdempotentSemiring k_ => KleeneAlgebra k_ where
 >    star :: k_ -> k_
