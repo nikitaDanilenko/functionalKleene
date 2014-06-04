@@ -9,12 +9,12 @@ class IdempotentSemiring s where
     isZero, isOne :: s -> Bool
 \end{code}
 
-class IdempotentSemiring k_ => KleeneAlgebra k_ where
-    star :: k_ -> k_
+> class IdempotentSemiring k_ => KleeneAlgebra k_ where
+>    star :: k_ -> k_
 
-type Arc a_ = (Int, a_)
-type Row a_ = [Arc a_]
-type Mat a_ = [Row a_]
+> type Arc a_ = (Int, a_)
+> type Row a_ = [Arc a_]
+> type Mat a_ = [Row a_]
 
 (.!.) :: IdempotentSemiring s_ => Row s_ -> Int -> s_
 []             .!. _ = zero
