@@ -6,7 +6,7 @@ matrices (e.g. triangle or diagonal matrices). The randomness is
 provided by the `System.Random` implementation and is thus repeatable,
 which makes it very useful for testing.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 module RandomMatrix (
     randomSquareMatLike,
     randomDiagonalLike,
@@ -43,7 +43,7 @@ conditions:
 -   The value at every index is an association list that is sorted with
     respect to its indices.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 type MatLike a = [(Int, [(Int, a)])]
 ```
 
@@ -55,7 +55,7 @@ table. Finally, the table is reduced to an association list. Any density
 larger than 1 behaves as 1 and every density smaller than 0 behaves as
 0.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 randomMatLikeWith :: (RandomGen g, Random a) =>
     g                        -- ^ random generator
  -> Int                      -- ^ number of rows
@@ -81,7 +81,7 @@ This function creates a random matrix by computing the necessary number
 of entries, then shuffling them and finally splitting them into uniform
 chunks which are then used as rows.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 randomMatLike ::
   (RandomGen g, Random a) => g            -- ^ random generator
                           -> Int          -- ^ number of rows
@@ -95,7 +95,7 @@ randomMatLike gen rows cols = randomMatLikeWith gen rows cols (*) (resizeWith (c
 A random graph is a random matrix with the same number of rows and
 columns.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 randomSquareMatLike ::
   (RandomGen g, Random a) => g            -- ^ random generator
                           -> Int          -- ^ number of rows and columns
@@ -110,7 +110,7 @@ computed w.r.t. the diagonal and *not* the number of entries altogether.
 That is: `randomDiagonalLike (mkStdGen 1234) 10 0.3 (0, 1)` will create
 a square matrix with exactly three (not thirty) entries.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 randomDiagonalLike ::
   (RandomGen g, Random a) => g            -- ^ random generator
                           -> Int          -- ^ number of rows and columns
@@ -126,7 +126,7 @@ Creates a random triangle square matrix. As with `randomDiagonalLike`
 the density refers to the density of the triangle. That is the number of
 entries in the matrix will be `floor (density * size * (size + 1) / 2)`.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 randomTriangleLike ::
   (RandomGen g, Random a) => g            -- ^ random generator
                           -> Int          -- ^ number of rows and columns
@@ -142,7 +142,7 @@ Creates a random strict triangle matrix (no entries at the diagonal).
 The density refers to the density of the strict triangle, that is the
 number of entries is `floor (density * size * (size - 1) / 2)`.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 randomStrictTriangleLike ::
   (RandomGen g, Random a) => g            -- ^ random generator
                           -> Int          -- ^ number of rows and columns
@@ -159,7 +159,7 @@ Random instances
 `Random` instance for pairs of Random instances that simply generates
 two values in sequence.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 instance (Random a, Random b) => Random (a, b) where
 
   randomR ((la, lb), (ua, ub)) g = ((x, y), g'') where
@@ -174,7 +174,7 @@ instance (Random a, Random b) => Random (a, b) where
 We define a simple instance of `Random` for `Tropical` which uses the
 underlying `Int` representation to create a random value.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 instance (Random a, Ord a, Enum a) => Random (Tropical a) where
   randomR (l, u) g = (toEnum pos, g') where
     (pos, g') = randomR (fromEnum l, fromEnum u) g
@@ -192,7 +192,7 @@ next chunk. For instance:
 -   `breakWith id    3 "Explanation" == ["Exp","lan","ati","on"]`
 -   `breakWith (+ 1) 1 "Explanation" == ["E","xp","lan","atio","n"]`
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 breakWith :: (Int -> Int) -> Int -> [a] -> [[a]]
 breakWith f = go where
 
@@ -204,7 +204,7 @@ Given an integer *n* and a list this function breaks the list into
 chunks of length *n*. The last chunk is shorter, iff the length of the
 given list is not a multiple of *n*.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 chopUniform :: Int -> [a] -> [[a]]
 chopUniform = breakWith id
 ```
@@ -217,7 +217,7 @@ if the length of the list is not \_n*(n+1)/2\_ for some natural number
 The name of the function hints at its use, since one can use the
 resulting chunks to fill a lower triangle matrix.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 chopTriangle :: [a] -> [[a]]
 chopTriangle = breakWith (+ 1) 1
 ```
@@ -229,7 +229,7 @@ to last iff the list length is not *n \* (n+1)/2* for some integer *n*
 Again, the name hints at the function's application, namely the
 construction of a strict lower triangle matrix.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 chopStrictTriangle :: [a] -> [[a]]
 chopStrictTriangle = breakWith (+1) 0
 ```
@@ -238,7 +238,7 @@ One particular recurring scheme is to split a list of `Maybe a` values
 into lists of such values and then transform these lists into rows. This
 scheme is captured by the following function.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 resizeWith :: ([Maybe a] -> [[Maybe a]]) -> [Maybe a] -> MatLike a
 resizeWith f = zip [0 .. ] . map toRow . f
 ```
@@ -249,7 +249,7 @@ For example,
 
 -   `toRow [Just 'h', Nothing, Just 'i'] == [(0, 'h'), (2, 'i')]`
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 toRow :: [Maybe a] -> [(Int, a)]
 toRow = mapMaybe (uncurry (fmap . (,))) . zip [0 .. ]
 ```

@@ -4,27 +4,27 @@ Idempotent Semirings and Kleene Algebras
 This module provides the definition of an idempotent semiring and a
 Kleene algebra in terms of type classes and some instances thereof.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 module KleeneAlgebra where
 ```
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 import Data.Ord ( comparing )
 ```
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 infixr 6 .*.
 infixr 5 .+.
 ```
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 class IdempotentSemiring s where
     (.+.), (.*.)  :: s -> s -> s
     zero, one     :: s
     isZero, isOne :: s -> Bool
 ```
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 class IdempotentSemiring k => KleeneAlgebra k where
    star :: k -> k
 ```
@@ -52,7 +52,7 @@ exists.
 
 Boolean values form a semiring.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 instance IdempotentSemiring Bool where
   (.+.) = (||)
   (.*.) = (&&)
@@ -62,7 +62,7 @@ instance IdempotentSemiring Bool where
   isOne  = id
 ```
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 instance KleeneAlgebra Bool where
   star = const one
 ```
@@ -72,19 +72,19 @@ compute lightest paths. This semiring is usually defined on the
 non-negative real numbers with infinity, but it can be easily
 generalised.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 data Tropical w = MinWeight | MaxWeight | Weight { weight :: w }
     deriving Eq
 ```
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 instance Show a => Show (Tropical a) where
   show MinWeight = "Min"
   show MaxWeight = "Max"
   show (Weight w) = unwords ["Weight", show w]
 ```
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 instance Ord w => Ord (Tropical w) where
     compare MinWeight  _           = LT
     compare _          MinWeight   = GT
@@ -93,7 +93,7 @@ instance Ord w => Ord (Tropical w) where
     compare w          w'          = comparing weight w w'
 ```
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 instance Bounded (Tropical w) where
   minBound = MinWeight
   maxBound = MaxWeight
@@ -113,7 +113,7 @@ Assuming the expansion property, we can define an `Enum` instance for
 every value in between is mapped to the predecessor of the given
 representation on the inner values.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 instance Enum w => Enum (Tropical w) where
   toEnum (-2) = MinWeight
   toEnum x    | x > -2 && x < maxBound = Weight (toEnum (x + 1))
@@ -128,7 +128,7 @@ instance Enum w => Enum (Tropical w) where
 Assuming the expansion property again, one can define an order on the
 tropical semiring.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 instance (Ord w, Num w) => IdempotentSemiring (Tropical w) where
     (.+.) = min
     zero  = MaxWeight
@@ -149,7 +149,7 @@ instance (Ord w, Num w) => IdempotentSemiring (Tropical w) where
 Additionally, this semiring is also a Kleene algebra and its star
 operation is again the function `const one`
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 instance (Ord w, Num w) => KleeneAlgebra (Tropical w) where
   star = const one
 ```
@@ -158,7 +158,7 @@ Given two idempotent semiring their direct product is an idempotent
 semiring as well, where all operations and constants are taken
 component-wise.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 instance (IdempotentSemiring a, IdempotentSemiring b) => IdempotentSemiring (a, b) where
   (xl, yl) .+. (xr, yr) = (xl .+. xr, yl .+. yr)
   (xl, yl) .*. (xr, yr) = (xl .*. xr, yl .*. yr)
@@ -171,7 +171,7 @@ instance (IdempotentSemiring a, IdempotentSemiring b) => IdempotentSemiring (a, 
 Similarly, the direct product of two Kleene algebras is again a Kleene
 algebra.
 
-``` {.sourceCode .literate .haskell}
+``` {.haskell}
 instance (KleeneAlgebra a, KleeneAlgebra b) => KleeneAlgebra (a, b) where
   star (x, y) = (star x, star y)
 ```
