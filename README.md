@@ -24,8 +24,8 @@ The project is now installed and can be either used directly, e.g.:
 
 ~~~{.sh}
 bash> ghci
-ghci> :m VMM
-VMM>
+ghci> :m FunctionalKleene
+FunctionalKleene>
 ~~~
 
 or imported into an own Haskell module via `import FunctionalKleene`.
