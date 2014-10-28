@@ -35,7 +35,8 @@ terms of a string.
 > mkFunction "left"  matLike = kleeneClosureLeft  (fromAssociations matLike) `deepseq` return ()
 > mkFunction "right" matLike = kleeneClosure      (fromAssociations matLike) `deepseq` return ()
 > mkFunction "block" matLike = kleeneClosureBlock (fromAssociations matLike) `deepseq` return ()
-> mkFunction _       matLike = kleeneClosureArray (fromAssociations matLike) `deepseq` return ()
+> mkFunction "array" matLike = kleeneClosureArray (fromAssociations matLike) `deepseq` return ()
+> mkFunction _       _       = putStr message
 
 This message is displayed, if the input does not match the required criteria.
         
