@@ -19,6 +19,21 @@ classes and some instances thereof.
 > class IdempotentSemiring k => KleeneAlgebra k where
 >    star :: k -> k
 
+> class IdempotentSemiring k => KAT k where
+>   sparseTests :: [k]
+>   isSimple    :: k -> Bool
+>   compute     :: k -> k
+
+> katStar :: KAT k_ => k_ -> k_
+> katStar a = one .+. katPlus a
+
+> katPlus :: KAT k_ => k_ -> k_
+> katPlus a = tau a sparseTests
+
+> tau :: KAT k_ => k_ -> [k_] -> k_
+> tau a  []        = a
+> tau a  (t : ts)  = x .*. katStar (t .*. x) where x = tau a ts
+
 We require that the following laws are
 satisfied for all `a, b, c :: s`:
 

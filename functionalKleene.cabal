@@ -3,7 +3,7 @@
 
 name:                functionalKleene
 version:             0.1.0.0
--- synopsis:            
+synopsis:            A library for computing Kleene closures of matrices.
 -- description:         
 license:             BSD3
 license-file:        LICENSE
