@@ -61,4 +61,7 @@ We refer to the excellent documentation in the paper for details about the funct
 >             rest'                    = star (rest .+. left' .*. top)
 
 > kleeneClosureBlock :: KleeneAlgebra k => Matrix k -> Matrix k
-> kleeneClosureBlock = star
+> kleeneClosureBlock a = a .*. star a
+> 
+> starClosureBlock :: KleeneAlgebra k => Matrix k -> Matrix k
+> starClosureBlock = star

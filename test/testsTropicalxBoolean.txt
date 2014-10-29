@@ -1,0 +1,1125 @@
+runTest 0100 0.001 -1673289139 txb array
+<<ghc: 344068864 bytes, 652 GCs, 14280745/69023724 avg/max bytes residency (10 samples), 135M in use, 0.00 INIT (0.00 elapsed), 0.27 MUT (0.31 elapsed), 0.58 GC (0.58 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.001 -1673289139 txb left
+<<ghc: 19253836 bytes, 38 GCs, 105600/187808 avg/max bytes residency (3 samples), 2M in use, 0.00 INIT (0.00 elapsed), 0.01 MUT (0.02 elapsed), 0.01 GC (0.01 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.001 -1673289139 txb right
+<<ghc: 19251252 bytes, 38 GCs, 116294/219916 avg/max bytes residency (3 samples), 2M in use, 0.00 INIT (0.00 elapsed), 0.01 MUT (0.01 elapsed), 0.02 GC (0.01 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.001 -1673289139 txb block*
+<<ghc: 332682400 bytes, 578 GCs, 12599202/62289000 avg/max bytes residency (13 samples), 125M in use, 0.00 INIT (0.00 elapsed), 0.31 MUT (0.25 elapsed), 0.68 GC (0.79 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.001 -1673289139 txb block+
+<<ghc: 501205256 bytes, 911 GCs, 12768681/63304784 avg/max bytes residency (13 samples), 127M in use, 0.00 INIT (0.00 elapsed), 0.31 MUT (0.29 elapsed), 0.67 GC (0.74 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.001 1483475230 txb array
+<<ghc: 344071088 bytes, 652 GCs, 14285960/69022280 avg/max bytes residency (10 samples), 135M in use, 0.00 INIT (0.00 elapsed), 0.33 MUT (0.32 elapsed), 0.51 GC (0.58 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.001 1483475230 txb left
+<<ghc: 19254348 bytes, 38 GCs, 105596/187760 avg/max bytes residency (3 samples), 2M in use, 0.00 INIT (0.00 elapsed), 0.02 MUT (0.02 elapsed), 0.01 GC (0.01 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.001 1483475230 txb right
+<<ghc: 19251764 bytes, 38 GCs, 116293/219892 avg/max bytes residency (3 samples), 2M in use, 0.00 INIT (0.00 elapsed), 0.02 MUT (0.01 elapsed), 0.00 GC (0.01 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.001 1483475230 txb block*
+<<ghc: 332716416 bytes, 581 GCs, 12593237/62291488 avg/max bytes residency (13 samples), 125M in use, 0.00 INIT (0.00 elapsed), 0.29 MUT (0.26 elapsed), 0.77 GC (0.82 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.001 1483475230 txb block+
+<<ghc: 500878824 bytes, 911 GCs, 12653395/62410948 avg/max bytes residency (13 samples), 125M in use, 0.00 INIT (0.00 elapsed), 0.26 MUT (0.27 elapsed), 0.68 GC (0.74 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.001 -825569446 txb array
+<<ghc: 344063220 bytes, 652 GCs, 13644844/65781728 avg/max bytes residency (10 samples), 129M in use, 0.00 INIT (0.00 elapsed), 0.29 MUT (0.32 elapsed), 0.52 GC (0.56 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.001 -825569446 txb left
+<<ghc: 19250764 bytes, 38 GCs, 105665/187968 avg/max bytes residency (3 samples), 2M in use, 0.00 INIT (0.00 elapsed), 0.01 MUT (0.01 elapsed), 0.01 GC (0.01 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.001 -825569446 txb right
+<<ghc: 19248180 bytes, 38 GCs, 116261/219796 avg/max bytes residency (3 samples), 2M in use, 0.00 INIT (0.00 elapsed), 0.02 MUT (0.01 elapsed), 0.01 GC (0.01 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.001 -825569446 txb block*
+<<ghc: 332679668 bytes, 577 GCs, 12598840/62284824 avg/max bytes residency (13 samples), 125M in use, 0.00 INIT (0.00 elapsed), 0.25 MUT (0.26 elapsed), 0.76 GC (0.78 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.001 -825569446 txb block+
+<<ghc: 500842076 bytes, 911 GCs, 12658435/62404148 avg/max bytes residency (13 samples), 125M in use, 0.00 INIT (0.00 elapsed), 0.27 MUT (0.31 elapsed), 0.75 GC (0.78 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.01 -1673289139 txb array
+<<ghc: 344264748 bytes, 653 GCs, 12570937/55372084 avg/max bytes residency (10 samples), 118M in use, 0.00 INIT (0.00 elapsed), 0.35 MUT (0.32 elapsed), 0.48 GC (0.52 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.01 -1673289139 txb left
+<<ghc: 19791716 bytes, 39 GCs, 108669/193280 avg/max bytes residency (3 samples), 2M in use, 0.00 INIT (0.00 elapsed), 0.01 MUT (0.01 elapsed), 0.01 GC (0.01 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.01 -1673289139 txb right
+<<ghc: 19806692 bytes, 39 GCs, 119366/225376 avg/max bytes residency (3 samples), 2M in use, 0.00 INIT (0.00 elapsed), 0.01 MUT (0.01 elapsed), 0.01 GC (0.01 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.01 -1673289139 txb block*
+<<ghc: 332792180 bytes, 585 GCs, 12545880/61896244 avg/max bytes residency (13 samples), 124M in use, 0.00 INIT (0.00 elapsed), 0.24 MUT (0.28 elapsed), 0.77 GC (0.78 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.01 -1673289139 txb block+
+<<ghc: 507757400 bytes, 913 GCs, 12649858/62387132 avg/max bytes residency (13 samples), 125M in use, 0.00 INIT (0.00 elapsed), 0.38 MUT (0.37 elapsed), 0.74 GC (0.78 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.01 1483475230 txb array
+<<ghc: 344247520 bytes, 653 GCs, 13571530/65382148 avg/max bytes residency (10 samples), 128M in use, 0.00 INIT (0.00 elapsed), 0.31 MUT (0.33 elapsed), 0.53 GC (0.56 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.01 1483475230 txb left
+<<ghc: 19623764 bytes, 38 GCs, 108660/193232 avg/max bytes residency (3 samples), 2M in use, 0.00 INIT (0.00 elapsed), 0.01 MUT (0.01 elapsed), 0.01 GC (0.01 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.01 1483475230 txb right
+<<ghc: 19587840 bytes, 38 GCs, 119350/225340 avg/max bytes residency (3 samples), 2M in use, 0.00 INIT (0.00 elapsed), 0.02 MUT (0.01 elapsed), 0.00 GC (0.01 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.01 1483475230 txb block*
+<<ghc: 332346208 bytes, 588 GCs, 12539687/61882256 avg/max bytes residency (13 samples), 124M in use, 0.00 INIT (0.00 elapsed), 0.26 MUT (0.29 elapsed), 0.74 GC (0.78 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.01 1483475230 txb block+
+<<ghc: 508120836 bytes, 914 GCs, 13687404/68952640 avg/max bytes residency (13 samples), 138M in use, 0.00 INIT (0.00 elapsed), 0.32 MUT (0.35 elapsed), 0.78 GC (0.81 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.01 -825569446 txb array
+<<ghc: 344239684 bytes, 653 GCs, 13925255/65611544 avg/max bytes residency (10 samples), 132M in use, 0.00 INIT (0.00 elapsed), 0.33 MUT (0.32 elapsed), 0.51 GC (0.56 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.01 -825569446 txb left
+<<ghc: 19572824 bytes, 38 GCs, 108656/193220 avg/max bytes residency (3 samples), 2M in use, 0.00 INIT (0.00 elapsed), 0.01 MUT (0.01 elapsed), 0.00 GC (0.01 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.01 -825569446 txb right
+<<ghc: 19567744 bytes, 38 GCs, 119354/225352 avg/max bytes residency (3 samples), 2M in use, 0.00 INIT (0.00 elapsed), 0.01 MUT (0.02 elapsed), 0.01 GC (0.01 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.01 -825569446 txb block*
+<<ghc: 332671992 bytes, 588 GCs, 15148017/77957436 avg/max bytes residency (13 samples), 156M in use, 0.00 INIT (0.00 elapsed), 0.27 MUT (0.27 elapsed), 0.80 GC (0.87 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.01 -825569446 txb block+
+<<ghc: 507920964 bytes, 913 GCs, 16777907/88293844 avg/max bytes residency (13 samples), 176M in use, 0.00 INIT (0.00 elapsed), 0.35 MUT (0.34 elapsed), 0.83 GC (0.92 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.025 -1673289139 txb array
+<<ghc: 350262608 bytes, 664 GCs, 11624100/45690900 avg/max bytes residency (10 samples), 109M in use, 0.00 INIT (0.00 elapsed), 0.31 MUT (0.34 elapsed), 0.47 GC (0.49 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.025 -1673289139 txb left
+<<ghc: 65356688 bytes, 126 GCs, 650330/1322316 avg/max bytes residency (16 samples), 4M in use, 0.00 INIT (0.00 elapsed), 0.04 MUT (0.04 elapsed), 0.06 GC (0.05 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.025 -1673289139 txb right
+<<ghc: 72572920 bytes, 140 GCs, 489324/1493752 avg/max bytes residency (13 samples), 5M in use, 0.00 INIT (0.00 elapsed), 0.06 MUT (0.05 elapsed), 0.03 GC (0.04 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.025 -1673289139 txb block*
+<<ghc: 334266824 bytes, 587 GCs, 12538094/61885492 avg/max bytes residency (13 samples), 124M in use, 0.00 INIT (0.00 elapsed), 0.30 MUT (0.29 elapsed), 0.70 GC (0.78 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.025 -1673289139 txb block+
+<<ghc: 516210632 bytes, 920 GCs, 13601594/68395324 avg/max bytes residency (13 samples), 137M in use, 0.00 INIT (0.00 elapsed), 0.46 MUT (0.42 elapsed), 0.72 GC (0.83 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.025 1483475230 txb array
+<<ghc: 350939948 bytes, 666 GCs, 13634538/65804364 avg/max bytes residency (10 samples), 129M in use, 0.00 INIT (0.00 elapsed), 0.33 MUT (0.36 elapsed), 0.54 GC (0.57 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.025 1483475230 txb left
+<<ghc: 71003244 bytes, 137 GCs, 1003909/1803296 avg/max bytes residency (15 samples), 6M in use, 0.00 INIT (0.00 elapsed), 0.04 MUT (0.05 elapsed), 0.08 GC (0.08 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.025 1483475230 txb right
+<<ghc: 80438728 bytes, 155 GCs, 454131/1507496 avg/max bytes residency (15 samples), 4M in use, 0.00 INIT (0.00 elapsed), 0.05 MUT (0.05 elapsed), 0.04 GC (0.05 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.025 1483475230 txb block*
+<<ghc: 334736368 bytes, 589 GCs, 12533712/61875752 avg/max bytes residency (13 samples), 124M in use, 0.00 INIT (0.00 elapsed), 0.29 MUT (0.28 elapsed), 0.73 GC (0.78 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.025 1483475230 txb block+
+<<ghc: 514188944 bytes, 919 GCs, 13700212/69175616 avg/max bytes residency (13 samples), 138M in use, 0.00 INIT (0.00 elapsed), 0.41 MUT (0.45 elapsed), 0.87 GC (0.89 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.025 -825569446 txb array
+<<ghc: 353128492 bytes, 670 GCs, 10834129/37779804 avg/max bytes residency (10 samples), 102M in use, 0.00 INIT (0.00 elapsed), 0.38 MUT (0.34 elapsed), 0.42 GC (0.49 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.025 -825569446 txb left
+<<ghc: 87681924 bytes, 169 GCs, 1253969/2242560 avg/max bytes residency (16 samples), 7M in use, 0.00 INIT (0.00 elapsed), 0.08 MUT (0.06 elapsed), 0.08 GC (0.10 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.025 -825569446 txb right
+<<ghc: 76019048 bytes, 147 GCs, 394424/990140 avg/max bytes residency (16 samples), 3M in use, 0.00 INIT (0.00 elapsed), 0.06 MUT (0.05 elapsed), 0.04 GC (0.05 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.025 -825569446 txb block*
+<<ghc: 335466632 bytes, 587 GCs, 12529391/61881640 avg/max bytes residency (13 samples), 124M in use, 0.00 INIT (0.00 elapsed), 0.30 MUT (0.29 elapsed), 0.73 GC (0.79 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.025 -825569446 txb block+
+<<ghc: 515804448 bytes, 921 GCs, 12633379/62365888 avg/max bytes residency (13 samples), 125M in use, 0.00 INIT (0.00 elapsed), 0.45 MUT (0.44 elapsed), 0.74 GC (0.79 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.05 -1673289139 txb array
+<<ghc: 364268492 bytes, 691 GCs, 13348971/38892832 avg/max bytes residency (11 samples), 103M in use, 0.00 INIT (0.00 elapsed), 0.32 MUT (0.35 elapsed), 0.62 GC (0.62 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.05 -1673289139 txb left
+<<ghc: 173379524 bytes, 334 GCs, 2161926/6670488 avg/max bytes residency (29 samples), 17M in use, 0.00 INIT (0.00 elapsed), 0.07 MUT (0.12 elapsed), 0.32 GC (0.28 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.05 -1673289139 txb right
+<<ghc: 160304164 bytes, 308 GCs, 1167827/2040260 avg/max bytes residency (32 samples), 6M in use, 0.00 INIT (0.00 elapsed), 0.09 MUT (0.10 elapsed), 0.17 GC (0.17 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.05 -1673289139 txb block*
+<<ghc: 345992836 bytes, 596 GCs, 12658063/62691968 avg/max bytes residency (13 samples), 126M in use, 0.00 INIT (0.00 elapsed), 0.30 MUT (0.28 elapsed), 0.72 GC (0.78 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.05 -1673289139 txb block+
+<<ghc: 525983872 bytes, 936 GCs, 12822803/63624584 avg/max bytes residency (13 samples), 127M in use, 0.00 INIT (0.00 elapsed), 0.44 MUT (0.46 elapsed), 0.78 GC (0.81 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.05 1483475230 txb array
+<<ghc: 363921688 bytes, 690 GCs, 12395650/45871652 avg/max bytes residency (10 samples), 116M in use, 0.00 INIT (0.00 elapsed), 0.34 MUT (0.35 elapsed), 0.50 GC (0.56 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.05 1483475230 txb left
+<<ghc: 170445804 bytes, 328 GCs, 2481919/7167460 avg/max bytes residency (24 samples), 18M in use, 0.00 INIT (0.00 elapsed), 0.09 MUT (0.12 elapsed), 0.30 GC (0.28 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.05 1483475230 txb right
+<<ghc: 159365648 bytes, 307 GCs, 1551824/5892528 avg/max bytes residency (26 samples), 16M in use, 0.00 INIT (0.00 elapsed), 0.11 MUT (0.10 elapsed), 0.17 GC (0.19 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.05 1483475230 txb block*
+<<ghc: 344077632 bytes, 597 GCs, 12543111/61886248 avg/max bytes residency (13 samples), 124M in use, 0.00 INIT (0.00 elapsed), 0.31 MUT (0.29 elapsed), 0.70 GC (0.78 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.05 1483475230 txb block+
+<<ghc: 525155996 bytes, 937 GCs, 12647496/62366492 avg/max bytes residency (13 samples), 125M in use, 0.00 INIT (0.00 elapsed), 0.49 MUT (0.51 elapsed), 0.82 GC (0.85 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.05 -825569446 txb array
+<<ghc: 366099924 bytes, 695 GCs, 13108503/38892764 avg/max bytes residency (11 samples), 102M in use, 0.00 INIT (0.00 elapsed), 0.35 MUT (0.35 elapsed), 0.55 GC (0.61 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.05 -825569446 txb left
+<<ghc: 188080148 bytes, 362 GCs, 2374682/6838980 avg/max bytes residency (29 samples), 17M in use, 0.00 INIT (0.00 elapsed), 0.11 MUT (0.12 elapsed), 0.31 GC (0.31 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.05 -825569446 txb right
+<<ghc: 174051164 bytes, 335 GCs, 1323853/2950048 avg/max bytes residency (32 samples), 8M in use, 0.00 INIT (0.00 elapsed), 0.10 MUT (0.11 elapsed), 0.20 GC (0.19 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.05 -825569446 txb block*
+<<ghc: 344565668 bytes, 601 GCs, 12539704/61886236 avg/max bytes residency (13 samples), 124M in use, 0.00 INIT (0.00 elapsed), 0.30 MUT (0.29 elapsed), 0.73 GC (0.78 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.05 -825569446 txb block+
+<<ghc: 528241224 bytes, 941 GCs, 12644181/62366492 avg/max bytes residency (13 samples), 125M in use, 0.00 INIT (0.00 elapsed), 0.50 MUT (0.49 elapsed), 0.78 GC (0.85 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.1 -1673289139 txb array
+<<ghc: 373883544 bytes, 709 GCs, 13017689/43222848 avg/max bytes residency (10 samples), 122M in use, 0.00 INIT (0.00 elapsed), 0.34 MUT (0.35 elapsed), 0.59 GC (0.64 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.1 -1673289139 txb left
+<<ghc: 242847688 bytes, 467 GCs, 1863820/11718668 avg/max bytes residency (49 samples), 30M in use, 0.00 INIT (0.00 elapsed), 0.14 MUT (0.16 elapsed), 0.40 GC (0.40 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.1 -1673289139 txb right
+<<ghc: 231793972 bytes, 445 GCs, 1612029/5661500 avg/max bytes residency (43 samples), 14M in use, 0.00 INIT (0.00 elapsed), 0.13 MUT (0.14 elapsed), 0.30 GC (0.30 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.1 -1673289139 txb block*
+<<ghc: 354580892 bytes, 617 GCs, 12672298/62692272 avg/max bytes residency (13 samples), 126M in use, 0.00 INIT (0.00 elapsed), 0.32 MUT (0.29 elapsed), 0.71 GC (0.79 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.1 -1673289139 txb block+
+<<ghc: 536926752 bytes, 961 GCs, 13865251/60526808 avg/max bytes residency (14 samples), 150M in use, 0.00 INIT (0.00 elapsed), 0.37 MUT (0.41 elapsed), 0.89 GC (0.93 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.1 1483475230 txb array
+<<ghc: 375194920 bytes, 712 GCs, 12943904/43222260 avg/max bytes residency (10 samples), 121M in use, 0.00 INIT (0.00 elapsed), 0.35 MUT (0.35 elapsed), 0.54 GC (0.60 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.1 1483475230 txb left
+<<ghc: 253568636 bytes, 488 GCs, 2217071/12603272 avg/max bytes residency (43 samples), 32M in use, 0.00 INIT (0.00 elapsed), 0.13 MUT (0.16 elapsed), 0.43 GC (0.42 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.1 1483475230 txb right
+<<ghc: 235476356 bytes, 453 GCs, 1358244/6247508 avg/max bytes residency (50 samples), 16M in use, 0.00 INIT (0.00 elapsed), 0.10 MUT (0.14 elapsed), 0.32 GC (0.30 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.1 1483475230 txb block*
+<<ghc: 356471912 bytes, 620 GCs, 12203328/59918868 avg/max bytes residency (13 samples), 121M in use, 0.00 INIT (0.00 elapsed), 0.30 MUT (0.30 elapsed), 0.70 GC (0.76 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.1 1483475230 txb block+
+<<ghc: 537952900 bytes, 963 GCs, 15368079/60519104 avg/max bytes residency (14 samples), 171M in use, 0.00 INIT (0.00 elapsed), 0.40 MUT (0.40 elapsed), 0.94 GC (1.02 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.1 -825569446 txb array
+<<ghc: 373734472 bytes, 709 GCs, 14894169/42356168 avg/max bytes residency (11 samples), 119M in use, 0.00 INIT (0.00 elapsed), 0.36 MUT (0.36 elapsed), 0.67 GC (0.73 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.1 -825569446 txb left
+<<ghc: 242572736 bytes, 467 GCs, 2555761/12574632 avg/max bytes residency (37 samples), 32M in use, 0.00 INIT (0.00 elapsed), 0.12 MUT (0.16 elapsed), 0.45 GC (0.42 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.1 -825569446 txb right
+<<ghc: 229995632 bytes, 442 GCs, 1402851/5975112 avg/max bytes residency (47 samples), 15M in use, 0.00 INIT (0.00 elapsed), 0.13 MUT (0.14 elapsed), 0.28 GC (0.29 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.1 -825569446 txb block*
+<<ghc: 353900056 bytes, 617 GCs, 13498213/67774712 avg/max bytes residency (13 samples), 136M in use, 0.00 INIT (0.00 elapsed), 0.29 MUT (0.30 elapsed), 0.79 GC (0.81 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0100 0.1 -825569446 txb block+
+<<ghc: 535201812 bytes, 960 GCs, 13827694/69871444 avg/max bytes residency (13 samples), 140M in use, 0.00 INIT (0.00 elapsed), 0.51 MUT (0.48 elapsed), 0.78 GC (0.89 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.001 -1673289139 txb array
+<<ghc: 5198760412 bytes, 9844 GCs, 130226457/1157349752 avg/max bytes residency (20 samples), 2402M in use, 0.00 INIT (0.00 elapsed), 7.30 MUT (7.10 elapsed), 11.71 GC (12.78 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.001 -1673289139 txb left
+<<ghc: 131127892 bytes, 253 GCs, 839361/1447944 avg/max bytes residency (11 samples), 5M in use, 0.00 INIT (0.00 elapsed), 0.08 MUT (0.07 elapsed), 0.06 GC (0.07 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.001 -1673289139 txb right
+<<ghc: 131120924 bytes, 253 GCs, 943830/1478520 avg/max bytes residency (10 samples), 5M in use, 0.00 INIT (0.00 elapsed), 0.08 MUT (0.07 elapsed), 0.05 GC (0.07 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.001 -1673289139 txb block*
+<<ghc: 5401433200 bytes, 8675 GCs, 131053556/983424028 avg/max bytes residency (20 samples), 1951M in use, 0.00 INIT (0.00 elapsed), 5.17 MUT (5.11 elapsed), 13.32 GC (14.15 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.001 -1673289139 txb block+
+<<ghc: 7760218664 bytes, 13933 GCs, 135780680/1029080176 avg/max bytes residency (20 samples), 2041M in use, 0.00 INIT (0.00 elapsed), 6.38 MUT (6.17 elapsed), 13.33 GC (14.28 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.001 1483475230 txb array
+<<ghc: 5198783852 bytes, 9844 GCs, 130530617/1163234732 avg/max bytes residency (20 samples), 2408M in use, 0.00 INIT (0.00 elapsed), 7.23 MUT (7.15 elapsed), 11.94 GC (12.84 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.001 1483475230 txb left
+<<ghc: 131150164 bytes, 253 GCs, 838218/1447956 avg/max bytes residency (11 samples), 5M in use, 0.00 INIT (0.00 elapsed), 0.07 MUT (0.07 elapsed), 0.06 GC (0.06 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.001 1483475230 txb right
+<<ghc: 131142732 bytes, 253 GCs, 944102/1478520 avg/max bytes residency (10 samples), 5M in use, 0.00 INIT (0.00 elapsed), 0.07 MUT (0.07 elapsed), 0.06 GC (0.07 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.001 1483475230 txb block*
+<<ghc: 5400598872 bytes, 8682 GCs, 130942861/982240060 avg/max bytes residency (20 samples), 1949M in use, 0.00 INIT (0.00 elapsed), 5.63 MUT (5.51 elapsed), 13.43 GC (14.15 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.001 1483475230 txb block+
+<<ghc: 7766265660 bytes, 13937 GCs, 135694560/1028188828 avg/max bytes residency (20 samples), 2039M in use, 0.00 INIT (0.00 elapsed), 6.75 MUT (6.77 elapsed), 14.03 GC (15.08 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.001 -825569446 txb array
+<<ghc: 5198775976 bytes, 9844 GCs, 130350258/1160247624 avg/max bytes residency (20 samples), 2405M in use, 0.00 INIT (0.00 elapsed), 6.50 MUT (7.06 elapsed), 11.70 GC (12.75 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.001 -825569446 txb left
+<<ghc: 131149312 bytes, 254 GCs, 839431/1447992 avg/max bytes residency (11 samples), 5M in use, 0.00 INIT (0.00 elapsed), 0.06 MUT (0.07 elapsed), 0.08 GC (0.07 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.001 -825569446 txb right
+<<ghc: 131142660 bytes, 254 GCs, 944109/1478520 avg/max bytes residency (10 samples), 5M in use, 0.00 INIT (0.00 elapsed), 0.05 MUT (0.07 elapsed), 0.08 GC (0.07 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.001 -825569446 txb block*
+<<ghc: 5396825372 bytes, 8682 GCs, 131700857/989885240 avg/max bytes residency (20 samples), 1964M in use, 0.00 INIT (0.00 elapsed), 5.36 MUT (5.24 elapsed), 13.71 GC (14.52 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.001 -825569446 txb block+
+<<ghc: 7782938876 bytes, 13943 GCs, 135699357/1028172844 avg/max bytes residency (20 samples), 2039M in use, 0.00 INIT (0.00 elapsed), 6.28 MUT (6.13 elapsed), 13.60 GC (14.48 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.01 -1673289139 txb array
+<<ghc: 5298298044 bytes, 10035 GCs, 99629726/687226520 avg/max bytes residency (20 samples), 1811M in use, 0.00 INIT (0.00 elapsed), 7.40 MUT (7.50 elapsed), 9.81 GC (10.37 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.01 -1673289139 txb left
+<<ghc: 933180488 bytes, 1793 GCs, 8390514/24062956 avg/max bytes residency (43 samples), 60M in use, 0.00 INIT (0.00 elapsed), 0.85 MUT (0.79 elapsed), 1.58 GC (1.67 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.01 -1673289139 txb right
+<<ghc: 940664928 bytes, 1806 GCs, 3605274/9653924 avg/max bytes residency (71 samples), 27M in use, 0.00 INIT (0.00 elapsed), 0.64 MUT (0.61 elapsed), 1.04 GC (1.10 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.01 -1673289139 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0250 0.01 -1673289139 txb block+
+<<ghc: 8046687232 bytes, 14024 GCs, 120770024/886299576 avg/max bytes residency (20 samples), 1778M in use, 0.00 INIT (0.00 elapsed), 8.95 MUT (8.96 elapsed), 14.75 GC (15.41 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.01 1483475230 txb array
+<<ghc: 5294913080 bytes, 10028 GCs, 99564834/677384348 avg/max bytes residency (20 samples), 1810M in use, 0.00 INIT (0.00 elapsed), 7.68 MUT (7.70 elapsed), 10.15 GC (10.71 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.01 1483475230 txb left
+<<ghc: 888594976 bytes, 1707 GCs, 7590241/17839996 avg/max bytes residency (45 samples), 49M in use, 0.00 INIT (0.00 elapsed), 0.73 MUT (0.74 elapsed), 1.56 GC (1.58 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.01 1483475230 txb right
+<<ghc: 941291608 bytes, 1807 GCs, 4114466/15472312 avg/max bytes residency (63 samples), 40M in use, 0.00 INIT (0.00 elapsed), 0.65 MUT (0.61 elapsed), 1.05 GC (1.10 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.01 1483475230 txb block*
+<<ghc: 5395368896 bytes, 8780 GCs, 120074831/879372864 avg/max bytes residency (20 samples), 1767M in use, 0.00 INIT (0.00 elapsed), 5.76 MUT (5.71 elapsed), 12.53 GC (13.40 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.01 1483475230 txb block+
+<<ghc: 8044911156 bytes, 14037 GCs, 127016410/945789628 avg/max bytes residency (20 samples), 1877M in use, 0.00 INIT (0.00 elapsed), 8.56 MUT (8.55 elapsed), 14.21 GC (14.98 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.01 -825569446 txb array
+<<ghc: 5299117140 bytes, 10036 GCs, 98117321/677159448 avg/max bytes residency (20 samples), 1782M in use, 0.00 INIT (0.00 elapsed), 7.76 MUT (7.83 elapsed), 10.00 GC (10.54 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.01 -825569446 txb left
+<<ghc: 942475204 bytes, 1810 GCs, 7086277/19642248 avg/max bytes residency (50 samples), 52M in use, 0.00 INIT (0.00 elapsed), 0.78 MUT (0.80 elapsed), 1.64 GC (1.65 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.01 -825569446 txb right
+<<ghc: 882738468 bytes, 1695 GCs, 2801926/14359876 avg/max bytes residency (74 samples), 37M in use, 0.00 INIT (0.00 elapsed), 0.64 MUT (0.59 elapsed), 0.84 GC (0.90 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.01 -825569446 txb block*
+<<ghc: 5402867400 bytes, 8777 GCs, 120943272/887688676 avg/max bytes residency (20 samples), 1779M in use, 0.00 INIT (0.00 elapsed), 5.71 MUT (5.73 elapsed), 13.44 GC (13.99 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.01 -825569446 txb block+
+<<ghc: 8373268356 bytes, 14184 GCs, 123461710/911945192 avg/max bytes residency (20 samples), 1817M in use, 0.00 INIT (0.00 elapsed), 9.00 MUT (8.93 elapsed), 14.23 GC (15.09 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.025 -1673289139 txb array
+<<ghc: 5555401076 bytes, 10526 GCs, 127303366/712104804 avg/max bytes residency (21 samples), 1891M in use, 0.00 INIT (0.00 elapsed), 8.31 MUT (8.31 elapsed), 12.98 GC (13.65 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.025 -1673289139 txb left
+<<ghc: 2941740344 bytes, 5646 GCs, 21372082/111120088 avg/max bytes residency (65 samples), 276M in use, 0.00 INIT (0.00 elapsed), 2.33 MUT (2.43 elapsed), 5.98 GC (6.04 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.025 -1673289139 txb right
+<<ghc: 2688314092 bytes, 5156 GCs, 11428017/45504220 avg/max bytes residency (97 samples), 111M in use, 0.00 INIT (0.00 elapsed), 1.67 MUT (1.91 elapsed), 4.62 GC (4.46 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.025 -1673289139 txb block*
+<<ghc: 5557206876 bytes, 9063 GCs, 137019602/1039368036 avg/max bytes residency (20 samples), 2062M in use, 0.00 INIT (0.00 elapsed), 5.90 MUT (5.83 elapsed), 14.10 GC (14.92 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.025 -1673289139 txb block+
+<<ghc: 8244343336 bytes, 14354 GCs, 138626721/1054719312 avg/max bytes residency (20 samples), 2092M in use, 0.00 INIT (0.00 elapsed), 10.82 MUT (10.84 elapsed), 18.49 GC (19.43 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.025 1483475230 txb array
+<<ghc: 5549296892 bytes, 10514 GCs, 127674584/712104420 avg/max bytes residency (21 samples), 1867M in use, 0.00 INIT (0.00 elapsed), 8.32 MUT (8.37 elapsed), 13.08 GC (13.72 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.025 1483475230 txb left
+<<ghc: 2892971564 bytes, 5552 GCs, 21435944/121587820 avg/max bytes residency (64 samples), 302M in use, 0.00 INIT (0.00 elapsed), 2.40 MUT (2.41 elapsed), 5.86 GC (6.04 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.025 1483475230 txb right
+<<ghc: 2957743104 bytes, 5673 GCs, 15544576/52810056 avg/max bytes residency (82 samples), 130M in use, 0.00 INIT (0.00 elapsed), 2.30 MUT (2.18 elapsed), 4.96 GC (5.18 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.025 1483475230 txb block*
+<<ghc: 5568800340 bytes, 9074 GCs, 136517456/1034560736 avg/max bytes residency (20 samples), 2052M in use, 0.00 INIT (0.00 elapsed), 5.89 MUT (5.85 elapsed), 13.89 GC (14.82 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.025 1483475230 txb block+
+<<ghc: 8335902100 bytes, 14391 GCs, 138620679/1054705544 avg/max bytes residency (20 samples), 2092M in use, 0.00 INIT (0.00 elapsed), 8.98 MUT (9.00 elapsed), 15.24 GC (16.08 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.025 -825569446 txb array
+<<ghc: 5550313604 bytes, 10516 GCs, 127387916/712097888 avg/max bytes residency (21 samples), 1880M in use, 0.00 INIT (0.00 elapsed), 8.48 MUT (8.31 elapsed), 12.81 GC (13.58 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.025 -825569446 txb left
+<<ghc: 2904573316 bytes, 5574 GCs, 17203179/110794312 avg/max bytes residency (79 samples), 275M in use, 0.00 INIT (0.00 elapsed), 2.36 MUT (2.39 elapsed), 5.81 GC (5.88 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.025 -825569446 txb right
+<<ghc: 2883585036 bytes, 5531 GCs, 18281333/104500664 avg/max bytes residency (68 samples), 264M in use, 0.00 INIT (0.00 elapsed), 2.02 MUT (2.12 elapsed), 5.19 GC (5.20 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.025 -825569446 txb block*
+<<ghc: 5582474148 bytes, 9070 GCs, 136073344/1030546292 avg/max bytes residency (20 samples), 2045M in use, 0.00 INIT (0.00 elapsed), 6.06 MUT (6.01 elapsed), 14.31 GC (15.00 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.025 -825569446 txb block+
+<<ghc: 8266788812 bytes, 14359 GCs, 142436524/1091044636 avg/max bytes residency (20 samples), 2164M in use, 0.00 INIT (0.00 elapsed), 8.44 MUT (8.40 elapsed), 14.96 GC (15.87 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.05 -1673289139 txb array
+<<ghc: 5655015716 bytes, 10716 GCs, 131584694/693683556 avg/max bytes residency (21 samples), 1941M in use, 0.00 INIT (0.00 elapsed), 8.30 MUT (8.26 elapsed), 13.44 GC (14.24 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.05 -1673289139 txb left
+<<ghc: 3701332404 bytes, 7106 GCs, 15978854/178436860 avg/max bytes residency (110 samples), 441M in use, 0.00 INIT (0.00 elapsed), 3.04 MUT (3.01 elapsed), 7.36 GC (7.57 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.05 -1673289139 txb right
+<<ghc: 3624045404 bytes, 6953 GCs, 10277533/104782276 avg/max bytes residency (152 samples), 257M in use, 0.00 INIT (0.00 elapsed), 2.68 MUT (2.70 elapsed), 6.33 GC (6.46 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.05 -1673289139 txb block*
+<<ghc: 5689106312 bytes, 9339 GCs, 172055648/1102727352 avg/max bytes residency (21 samples), 2863M in use, 0.00 INIT (0.00 elapsed), 5.92 MUT (5.95 elapsed), 17.93 GC (18.90 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.05 -1673289139 txb block+
+<<ghc: 8462498600 bytes, 14729 GCs, 144301221/943655124 avg/max bytes residency (21 samples), 2299M in use, 0.00 INIT (0.00 elapsed), 7.73 MUT (7.75 elapsed), 15.68 GC (16.45 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.05 1483475230 txb array
+<<ghc: 5677827564 bytes, 10760 GCs, 133289269/693456612 avg/max bytes residency (21 samples), 1938M in use, 0.00 INIT (0.00 elapsed), 8.46 MUT (8.35 elapsed), 13.58 GC (14.38 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.05 1483475230 txb left
+<<ghc: 3881010600 bytes, 7451 GCs, 22952286/226087784 avg/max bytes residency (81 samples), 560M in use, 0.00 INIT (0.00 elapsed), 3.19 MUT (3.20 elapsed), 7.98 GC (8.25 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.05 1483475230 txb right
+<<ghc: 3829526280 bytes, 7348 GCs, 10943244/105936164 avg/max bytes residency (153 samples), 261M in use, 0.00 INIT (0.00 elapsed), 2.74 MUT (2.85 elapsed), 6.86 GC (6.89 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.05 1483475230 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0250 0.05 1483475230 txb block+
+<<ghc: 8428261036 bytes, 14760 GCs, 166412635/953160120 avg/max bytes residency (21 samples), 2747M in use, 0.00 INIT (0.00 elapsed), 7.79 MUT (7.69 elapsed), 17.56 GC (18.56 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.05 -825569446 txb array
+<<ghc: 5656482824 bytes, 10719 GCs, 130974440/695644564 avg/max bytes residency (21 samples), 1949M in use, 0.00 INIT (0.00 elapsed), 8.43 MUT (8.30 elapsed), 13.32 GC (14.14 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.05 -825569446 txb left
+<<ghc: 3716283616 bytes, 7134 GCs, 12729351/178002000 avg/max bytes residency (138 samples), 441M in use, 0.00 INIT (0.00 elapsed), 3.01 MUT (3.00 elapsed), 7.36 GC (7.62 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.05 -825569446 txb right
+<<ghc: 3779219416 bytes, 7251 GCs, 8555503/100542096 avg/max bytes residency (193 samples), 248M in use, 0.00 INIT (0.00 elapsed), 2.69 MUT (2.80 elapsed), 6.74 GC (6.77 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.05 -825569446 txb block*
+<<ghc: 5707648396 bytes, 9326 GCs, 174860848/1178427952 avg/max bytes residency (21 samples), 2919M in use, 0.00 INIT (0.00 elapsed), 5.90 MUT (5.80 elapsed), 17.76 GC (19.01 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.05 -825569446 txb block+
+<<ghc: 8443618348 bytes, 14662 GCs, 132042259/992318960 avg/max bytes residency (20 samples), 1969M in use, 0.00 INIT (0.00 elapsed), 8.75 MUT (8.94 elapsed), 13.71 GC (14.25 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.1 -1673289139 txb array
+<<ghc: 5717935364 bytes, 10836 GCs, 138307326/860395552 avg/max bytes residency (19 samples), 2410M in use, 0.00 INIT (0.00 elapsed), 9.08 MUT (8.94 elapsed), 13.70 GC (14.67 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.1 -1673289139 txb left
+<<ghc: 4154493520 bytes, 7979 GCs, 16234699/252831304 avg/max bytes residency (122 samples), 628M in use, 0.00 INIT (0.00 elapsed), 3.46 MUT (3.40 elapsed), 9.37 GC (9.71 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.1 -1673289139 txb right
+<<ghc: 4122878324 bytes, 7914 GCs, 7481014/124837284 avg/max bytes residency (230 samples), 308M in use, 0.00 INIT (0.00 elapsed), 3.09 MUT (3.06 elapsed), 7.00 GC (7.19 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.1 -1673289139 txb block*
+<<ghc: 5803319004 bytes, 9603 GCs, 143432735/1099709688 avg/max bytes residency (20 samples), 2181M in use, 0.00 INIT (0.00 elapsed), 6.39 MUT (6.26 elapsed), 14.48 GC (15.37 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.1 -1673289139 txb block+
+<<ghc: 8508174704 bytes, 14935 GCs, 144993315/1114788860 avg/max bytes residency (20 samples), 2211M in use, 0.00 INIT (0.00 elapsed), 8.88 MUT (8.88 elapsed), 14.59 GC (15.51 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.1 1483475230 txb array
+<<ghc: 5729142236 bytes, 10857 GCs, 135435286/837860368 avg/max bytes residency (19 samples), 2358M in use, 0.00 INIT (0.00 elapsed), 8.96 MUT (8.87 elapsed), 13.52 GC (14.45 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.1 1483475230 txb left
+<<ghc: 4241970424 bytes, 8147 GCs, 11960835/267406408 avg/max bytes residency (167 samples), 662M in use, 0.00 INIT (0.00 elapsed), 3.57 MUT (3.44 elapsed), 8.62 GC (9.05 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.1 1483475230 txb right
+<<ghc: 4201984356 bytes, 8065 GCs, 8365517/140001708 avg/max bytes residency (212 samples), 344M in use, 0.00 INIT (0.00 elapsed), 2.96 MUT (3.18 elapsed), 7.46 GC (7.43 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.1 1483475230 txb block*
+<<ghc: 5823492076 bytes, 9653 GCs, 142538488/1091217292 avg/max bytes residency (20 samples), 2165M in use, 0.00 INIT (0.00 elapsed), 6.51 MUT (6.35 elapsed), 14.34 GC (15.24 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.1 1483475230 txb block+
+<<ghc: 8540512228 bytes, 14997 GCs, 144994983/1114801204 avg/max bytes residency (20 samples), 2211M in use, 0.00 INIT (0.00 elapsed), 9.28 MUT (9.08 elapsed), 14.44 GC (15.44 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.1 -825569446 txb array
+<<ghc: 5718976260 bytes, 10838 GCs, 134586973/832168884 avg/max bytes residency (19 samples), 2342M in use, 0.00 INIT (0.00 elapsed), 9.02 MUT (8.79 elapsed), 13.40 GC (14.36 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.1 -825569446 txb left
+<<ghc: 4168805068 bytes, 8008 GCs, 14837786/254371316 avg/max bytes residency (134 samples), 632M in use, 0.00 INIT (0.00 elapsed), 3.59 MUT (3.40 elapsed), 8.39 GC (8.89 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.1 -825569446 txb right
+<<ghc: 4188389332 bytes, 8040 GCs, 7640359/135369120 avg/max bytes residency (230 samples), 333M in use, 0.00 INIT (0.00 elapsed), 3.02 MUT (3.15 elapsed), 7.33 GC (7.36 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.1 -825569446 txb block*
+<<ghc: 5837525808 bytes, 9607 GCs, 142520887/1091026716 avg/max bytes residency (20 samples), 2164M in use, 0.00 INIT (0.00 elapsed), 6.48 MUT (6.18 elapsed), 14.24 GC (15.30 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0250 0.1 -825569446 txb block+
+<<ghc: 8595780432 bytes, 14950 GCs, 144939744/1114044796 avg/max bytes residency (20 samples), 2210M in use, 0.00 INIT (0.00 elapsed), 9.21 MUT (9.25 elapsed), 14.69 GC (15.51 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.001 -1673289139 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.001 -1673289139 txb left
+<<ghc: 580337980 bytes, 1087 GCs, 3139111/5824668 avg/max bytes residency (16 samples), 17M in use, 0.00 INIT (0.00 elapsed), 0.32 MUT (0.33 elapsed), 0.33 GC (0.33 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.001 -1673289139 txb right
+<<ghc: 579207132 bytes, 1087 GCs, 3499232/5863808 avg/max bytes residency (14 samples), 18M in use, 0.00 INIT (0.00 elapsed), 0.30 MUT (0.33 elapsed), 0.33 GC (0.33 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.001 -1673289139 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.001 -1673289139 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.001 1483475230 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.001 1483475230 txb left
+<<ghc: 580354076 bytes, 1087 GCs, 3134055/5824608 avg/max bytes residency (16 samples), 17M in use, 0.00 INIT (0.00 elapsed), 0.34 MUT (0.33 elapsed), 0.32 GC (0.34 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.001 1483475230 txb right
+<<ghc: 579159560 bytes, 1087 GCs, 3502487/5854512 avg/max bytes residency (14 samples), 18M in use, 0.00 INIT (0.00 elapsed), 0.32 MUT (0.34 elapsed), 0.35 GC (0.33 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.001 1483475230 txb block*
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.001 1483475230 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.001 -825569446 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.001 -825569446 txb left
+<<ghc: 580362104 bytes, 1087 GCs, 3137112/5824632 avg/max bytes residency (16 samples), 17M in use, 0.00 INIT (0.00 elapsed), 0.32 MUT (0.33 elapsed), 0.33 GC (0.33 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.001 -825569446 txb right
+<<ghc: 579189132 bytes, 1087 GCs, 3503135/5854512 avg/max bytes residency (14 samples), 18M in use, 0.00 INIT (0.00 elapsed), 0.31 MUT (0.33 elapsed), 0.35 GC (0.34 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.001 -825569446 txb block*
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.001 -825569446 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.01 -1673289139 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.01 -1673289139 txb left
+<<ghc: 19725119472 bytes, 37372 GCs, 15884094/708111816 avg/max bytes residency (63 samples), 1763M in use, 0.00 INIT (0.00 elapsed), 17.94 MUT (17.92 elapsed), 44.08 GC (45.04 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.01 -1673289139 txb right
+<<ghc: 18695336972 bytes, 35803 GCs, 52331418/275693440 avg/max bytes residency (82 samples), 681M in use, 0.00 INIT (0.00 elapsed), 15.25 MUT (15.22 elapsed), 34.70 GC (35.22 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.01 -1673289139 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.01 -1673289139 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.01 1483475230 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.01 1483475230 txb left
+<<ghc: 19221444588 bytes, 36564 GCs, 11191357/760070744 avg/max bytes residency (68 samples), 1889M in use, 0.00 INIT (0.00 elapsed), 17.05 MUT (17.24 elapsed), 43.45 GC (44.13 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.01 1483475230 txb right
+<<ghc: 19584976960 bytes, 37468 GCs, 6006853/342206432 avg/max bytes residency (81 samples), 846M in use, 0.00 INIT (0.00 elapsed), 16.13 MUT (16.09 elapsed), 37.29 GC (37.90 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.01 1483475230 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.01 1483475230 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.01 -825569446 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.01 -825569446 txb left
+<<ghc: 19518620160 bytes, 37160 GCs, 12606034/742477428 avg/max bytes residency (67 samples), 1842M in use, 0.00 INIT (0.00 elapsed), 17.53 MUT (17.61 elapsed), 43.83 GC (44.73 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.01 -825569446 txb right
+<<ghc: 19824765256 bytes, 37919 GCs, 7722660/672745252 avg/max bytes residency (76 samples), 1699M in use, 0.00 INIT (0.00 elapsed), 16.45 MUT (16.25 elapsed), 39.53 GC (40.54 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.01 -825569446 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.01 -825569446 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.025 -1673289139 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.025 -1673289139 txb left
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.025 -1673289139 txb right
+<<ghc: 30637485952 bytes, 56709 GCs, 9066887/840960080 avg/max bytes residency (151 samples), 2076M in use, 0.00 INIT (0.00 elapsed), 24.25 MUT (24.62 elapsed), 60.08 GC (60.84 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.025 -1673289139 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.025 -1673289139 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.025 1483475230 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.025 1483475230 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.025 1483475230 txb right
+<<ghc: 30822592252 bytes, 56861 GCs, 6018329/823538996 avg/max bytes residency (207 samples), 2033M in use, 0.00 INIT (0.00 elapsed), 24.41 MUT (24.31 elapsed), 64.58 GC (65.72 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.025 1483475230 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.025 1483475230 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.025 -825569446 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.025 -825569446 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.025 -825569446 txb right
+<<ghc: 30661768064 bytes, 56690 GCs, 6977411/844703556 avg/max bytes residency (173 samples), 2084M in use, 0.00 INIT (0.00 elapsed), 24.06 MUT (24.48 elapsed), 59.12 GC (59.86 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.025 -825569446 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.025 -825569446 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.05 -1673289139 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.05 -1673289139 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.05 -1673289139 txb right
+<<ghc: 34092121240 bytes, 62465 GCs, 3982808/1068659328 avg/max bytes residency (437 samples), 2639M in use, 0.00 INIT (0.00 elapsed), 26.52 MUT (26.82 elapsed), 63.06 GC (64.08 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.05 -1673289139 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.05 -1673289139 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.05 1483475230 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.05 1483475230 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.05 1483475230 txb right
+<<ghc: 35057516792 bytes, 64101 GCs, 10144355/1114683236 avg/max bytes residency (284 samples), 2756M in use, 0.00 INIT (0.00 elapsed), 27.87 MUT (28.01 elapsed), 67.44 GC (68.72 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.05 1483475230 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.05 1483475230 txb block+
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.05 -825569446 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.05 -825569446 txb left
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.05 -825569446 txb right
+<<ghc: 34483197764 bytes, 63088 GCs, 5403624/1076238580 avg/max bytes residency (398 samples), 2654M in use, 0.00 INIT (0.00 elapsed), 27.00 MUT (27.28 elapsed), 62.15 GC (65.66 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.05 -825569446 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.05 -825569446 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.1 -1673289139 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.1 -1673289139 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.1 -1673289139 txb right
+<<ghc: 36485206240 bytes, 66712 GCs, 5473008/1211008104 avg/max bytes residency (495 samples), 2991M in use, 0.00 INIT (0.00 elapsed), 29.06 MUT (28.78 elapsed), 67.68 GC (69.55 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.1 -1673289139 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.1 -1673289139 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.1 1483475230 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.1 1483475230 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.1 1483475230 txb right
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.1 1483475230 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.1 1483475230 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.1 -825569446 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.1 -825569446 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.1 -825569446 txb right
+<<ghc: 36533801644 bytes, 66775 GCs, 5657265/1223501344 avg/max bytes residency (487 samples), 3026M in use, 0.00 INIT (0.00 elapsed), 28.93 MUT (28.82 elapsed), 68.02 GC (69.68 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0500 0.1 -825569446 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0500 0.1 -825569446 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.001 -1673289139 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.001 -1673289139 txb left
+<<ghc: 1397386200 bytes, 2599 GCs, 6850421/13231924 avg/max bytes residency (18 samples), 38M in use, 0.00 INIT (0.00 elapsed), 0.84 MUT (0.84 elapsed), 0.82 GC (0.85 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0750 0.001 -1673289139 txb right
+<<ghc: 1393467016 bytes, 2599 GCs, 7006626/13261748 avg/max bytes residency (17 samples), 38M in use, 0.00 INIT (0.00 elapsed), 0.79 MUT (0.84 elapsed), 0.88 GC (0.85 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0750 0.001 -1673289139 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.001 -1673289139 txb block+
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.001 1483475230 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.001 1483475230 txb left
+<<ghc: 1397486124 bytes, 2599 GCs, 6851334/13231792 avg/max bytes residency (18 samples), 38M in use, 0.00 INIT (0.00 elapsed), 0.89 MUT (0.88 elapsed), 0.80 GC (0.84 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0750 0.001 1483475230 txb right
+<<ghc: 1393488048 bytes, 2598 GCs, 7011616/13261640 avg/max bytes residency (17 samples), 38M in use, 0.00 INIT (0.00 elapsed), 0.79 MUT (0.84 elapsed), 0.88 GC (0.85 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0750 0.001 1483475230 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.001 1483475230 txb block+
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.001 -825569446 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.001 -825569446 txb left
+<<ghc: 1397169888 bytes, 2598 GCs, 6840651/13231768 avg/max bytes residency (18 samples), 38M in use, 0.00 INIT (0.00 elapsed), 0.84 MUT (0.85 elapsed), 0.83 GC (0.85 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0750 0.001 -825569446 txb right
+<<ghc: 1393273032 bytes, 2598 GCs, 7011769/13261616 avg/max bytes residency (17 samples), 38M in use, 0.00 INIT (0.00 elapsed), 0.83 MUT (0.84 elapsed), 0.83 GC (0.84 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 0750 0.001 -825569446 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.001 -825569446 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.01 -1673289139 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.01 -1673289139 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.01 -1673289139 txb right
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.01 -1673289139 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.01 -1673289139 txb block+
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.01 1483475230 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.01 1483475230 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.01 1483475230 txb right
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.01 1483475230 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.01 1483475230 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.01 -825569446 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.01 -825569446 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.01 -825569446 txb right
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.01 -825569446 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.01 -825569446 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.025 -1673289139 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.025 -1673289139 txb left
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.025 -1673289139 txb right
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.025 -1673289139 txb block*
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.025 -1673289139 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.025 1483475230 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.025 1483475230 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.025 1483475230 txb right
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.025 1483475230 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.025 1483475230 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.025 -825569446 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.025 -825569446 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.025 -825569446 txb right
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.025 -825569446 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.025 -825569446 txb block+
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.05 -1673289139 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.05 -1673289139 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.05 -1673289139 txb right
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.05 -1673289139 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.05 -1673289139 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.05 1483475230 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.05 1483475230 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.05 1483475230 txb right
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.05 1483475230 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.05 1483475230 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.05 -825569446 txb array
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.05 -825569446 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.05 -825569446 txb right
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.05 -825569446 txb block*
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.05 -825569446 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.1 -1673289139 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.1 -1673289139 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.1 -1673289139 txb right
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.1 -1673289139 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.1 -1673289139 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.1 1483475230 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.1 1483475230 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.1 1483475230 txb right
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.1 1483475230 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.1 1483475230 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.1 -825569446 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.1 -825569446 txb left
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.1 -825569446 txb right
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.1 -825569446 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 0750 0.1 -825569446 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.001 -1673289139 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.001 -1673289139 txb left
+<<ghc: 2528531340 bytes, 4682 GCs, 11380668/23273572 avg/max bytes residency (21 samples), 67M in use, 0.00 INIT (0.00 elapsed), 1.60 MUT (1.64 elapsed), 1.63 GC (1.64 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 1000 0.001 -1673289139 txb right
+<<ghc: 2519736060 bytes, 4680 GCs, 12324399/23301572 avg/max bytes residency (19 samples), 67M in use, 0.00 INIT (0.00 elapsed), 1.62 MUT (1.62 elapsed), 1.61 GC (1.67 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 1000 0.001 -1673289139 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.001 -1673289139 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.001 1483475230 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.001 1483475230 txb left
+<<ghc: 2515798080 bytes, 4657 GCs, 11882482/23273716 avg/max bytes residency (20 samples), 67M in use, 0.00 INIT (0.00 elapsed), 1.60 MUT (1.62 elapsed), 1.62 GC (1.64 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 1000 0.001 1483475230 txb right
+<<ghc: 2507191728 bytes, 4656 GCs, 12990429/23301680 avg/max bytes residency (18 samples), 67M in use, 0.00 INIT (0.00 elapsed), 1.60 MUT (1.63 elapsed), 1.64 GC (1.66 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 1000 0.001 1483475230 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.001 1483475230 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.001 -825569446 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.001 -825569446 txb left
+<<ghc: 2514736784 bytes, 4655 GCs, 11871925/23273452 avg/max bytes residency (20 samples), 67M in use, 0.00 INIT (0.00 elapsed), 1.26 MUT (1.62 elapsed), 1.32 GC (1.63 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 1000 0.001 -825569446 txb right
+<<ghc: 2506431880 bytes, 4655 GCs, 12991052/23301428 avg/max bytes residency (18 samples), 67M in use, 0.00 INIT (0.00 elapsed), 1.62 MUT (1.61 elapsed), 1.60 GC (1.65 elapsed) :ghc>>
+-------------------------------------------------------------------------------
+runTest 1000 0.001 -825569446 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.001 -825569446 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.01 -1673289139 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.01 -1673289139 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.01 -1673289139 txb right
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.01 -1673289139 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.01 -1673289139 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.01 1483475230 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.01 1483475230 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.01 1483475230 txb right
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.01 1483475230 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.01 1483475230 txb block+
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.01 -825569446 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.01 -825569446 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.01 -825569446 txb right
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.01 -825569446 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.01 -825569446 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.025 -1673289139 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.025 -1673289139 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.025 -1673289139 txb right
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.025 -1673289139 txb block*
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.025 -1673289139 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.025 1483475230 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.025 1483475230 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.025 1483475230 txb right
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.025 1483475230 txb block*
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.025 1483475230 txb block+
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.025 -825569446 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.025 -825569446 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.025 -825569446 txb right
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.025 -825569446 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.025 -825569446 txb block+
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.05 -1673289139 txb array
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.05 -1673289139 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.05 -1673289139 txb right
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.05 -1673289139 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.05 -1673289139 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.05 1483475230 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.05 1483475230 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.05 1483475230 txb right
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.05 1483475230 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.05 1483475230 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.05 -825569446 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.05 -825569446 txb left
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.05 -825569446 txb right
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.05 -825569446 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.05 -825569446 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.1 -1673289139 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.1 -1673289139 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.1 -1673289139 txb right
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.1 -1673289139 txb block*
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.1 -1673289139 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.1 1483475230 txb array
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.1 1483475230 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.1 1483475230 txb right
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.1 1483475230 txb block*
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.1 1483475230 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.1 -825569446 txb array
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.1 -825569446 txb left
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.1 -825569446 txb right
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.1 -825569446 txb block*
+runTest: out of memory (requested 2097152 bytes)
+-------------------------------------------------------------------------------
+runTest 1000 0.1 -825569446 txb block+
+runTest: out of memory (requested 1048576 bytes)
+-------------------------------------------------------------------------------

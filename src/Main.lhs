@@ -2,11 +2,11 @@
 
 > import Control.DeepSeq    ( NFData ( .. ), deepseq )
 > import System.Environment ( getArgs )
-> import DolanClosure       ( Matrix ( .. ), kleeneClosureBlock )
+> import DolanClosure       ( Matrix ( .. ), kleeneClosureBlock, starClosureBlock )
 > import FunctionalKleene   ( fromAssociations, kleeneClosure, kleeneClosureArray, kleeneClosureLeft,
 >                             Row ( .. ), Mat ( .. ), ArrayMat ( .. ) )
 > import RandomMatrix       ( randomSquareMatLike, mkStdGen, MatLike )
-> import KleeneAlgebra      ( Tropical ( .. ), KleeneAlgebra )
+> import KleeneAlgebra      ( Tropical ( .. ), KleeneAlgebra ( star ) )
 
 Some instances of deepseq'able data.
 
@@ -32,11 +32,12 @@ This function applies a closure function to a given matrix. The closure function
 terms of a string. 
 
 > mkFunction :: (KleeneAlgebra k, NFData k) => String -> MatLike k -> IO ()
-> mkFunction "left"  matLike = kleeneClosureLeft  (fromAssociations matLike) `deepseq` return ()
-> mkFunction "right" matLike = kleeneClosure      (fromAssociations matLike) `deepseq` return ()
-> mkFunction "block" matLike = kleeneClosureBlock (fromAssociations matLike) `deepseq` return ()
-> mkFunction "array" matLike = kleeneClosureArray (fromAssociations matLike) `deepseq` return ()
-> mkFunction _       _       = putStr message
+> mkFunction "left"   matLike = kleeneClosureLeft  (fromAssociations matLike) `deepseq` return ()
+> mkFunction "right"  matLike = kleeneClosure      (fromAssociations matLike) `deepseq` return ()
+> mkFunction "block+" matLike = kleeneClosureBlock (fromAssociations matLike) `deepseq` return ()
+> mkFunction "block*" matLike = starClosureBlock   (fromAssociations matLike) `deepseq` return ()           
+> mkFunction "array"  matLike = kleeneClosureArray (fromAssociations matLike) `deepseq` return ()
+> mkFunction _       _        = putStr message
 
 This message is displayed, if the input does not match the required criteria.
         
@@ -44,7 +45,7 @@ This message is displayed, if the input does not match the required criteria.
 > message = unlines ["Required arguments:", "\tsize :: Int", "\tdensity :: Double",
 >                    "\trandomGenerator :: Int",
 >                    "\ttype ::= t (tropical) | txb (pair of tropical and Boolean) | b (boolean)",
->                    "\tfunction ::= left | right | array | block"]
+>                    "\tfunction ::= left | right | array | block+ | block*"]
 
 The (compiled!) main function expects a size, a density, a random generator, a type of Kleene algebra
 and the closure function. It then creates a random matrix with the given size and the given density
