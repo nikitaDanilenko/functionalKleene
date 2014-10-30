@@ -3,16 +3,17 @@ module FunctionalKleene where
 ```
 
 ``` {.haskell}
-import Control.Arrow ( second )
-import Data.Array    ( Array, listArray, (!), bounds, range, elems )
-import Data.Function ( on )
-import Data.List     ( groupBy, sortBy, intercalate )
-import Data.Ord      ( comparing )
+import Control.Arrow               ( second )
+import Data.Array                  ( Array, listArray, (!), bounds, range, elems )
+import Data.Function               ( on )
+import Data.List                   ( groupBy, sortBy, intercalate )
+import Data.Ord                    ( comparing )
 ```
 
 ``` {.haskell}
-import KleeneAlgebra ( IdempotentSemiring ( .. ), KleeneAlgebra ( .. ) )
-import RandomMatrix  ( chopUniform, MatLike )
+import KleeneAlgebra               ( IdempotentSemiring ( .. ), KleeneAlgebra ( .. ) )
+import qualified DolanClosure as D ( Matrix ( .. ) )
+import RandomMatrix                ( chopUniform, MatLike )
 ```
 
 Rows and auxiliary functions
@@ -237,7 +238,6 @@ simple testing and debugging purposes.
 class Matrix m where
 
     fromAssociations :: KleeneAlgebra k => MatLike k -> m k
-    entries          :: KleeneAlgebra k => m k -> Int
 ```
 
 Clearly, both matrix versions from above are instances of this type
@@ -246,19 +246,27 @@ class.
 ``` {.haskell}
 instance Matrix Mat where
   fromAssociations = Mat . map (toRowFromList . snd)
-  entries = sum . map size . matrix
 ```
 
 ``` {.haskell}
 instance Matrix ArrayMat where
-  fromAssociations ascs = ArrayMat (listArray bnds (fuse (toPosValues ascs) (range bnds))) where
-    toPosValues = concatMap (\(i, r) -> map (\(j, v) -> ((i, j), v)) r)
-    
-    fuse []                rest      = map (const zero) rest
-    fuse ps@((p, v) : pvs) (a : azs) | p == a    = v    : fuse pvs azs
-                                     | otherwise = zero : fuse ps azs
-    bnds = ((0, 0), (n-1, n-1))
-    n    = length ascs
-  
-  entries = length . filter (not . isZero) . elems . unArrayMat
+  fromAssociations ascs = ArrayMat (listArray bnds (fuseWith zero (toPosValues ascs) (range bnds))) 
+    where toPosValues = concatMap (\(i, r) -> map (\(j, v) -> ((i, j), v)) r)
+          bnds        = ((0, 0), (n-1, n-1))
+          n           = length ascs
+
+fuseWith :: Eq a => b -> [(a, b)] -> [a] -> [b]
+fuseWith zero = fuse where
+  fuse [] rest = map (const zero) rest
+  fuse ps@((p, v) : pvs) (a : azs) | p == a    = v    : fuse pvs azs
+                                   | otherwise = zero : fuse ps azs
+```
+
+The Dolan matrix representation is also an instance of `Matrix`
+
+``` {.haskell}
+instance Matrix D.Matrix where
+  fromAssociations [(_, [(_, x)])] = D.Scalar x
+  fromAssociations rs = D.Matrix (map ((\l -> fuseWith zero l list ) . snd) rs)
+    where list = map fst rs
 ```
