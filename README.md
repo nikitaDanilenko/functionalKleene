@@ -41,11 +41,15 @@ You can browse the documentation online:
   is an auxiliary file that takes care of the creation of random matrices.
 * [KleeneAlgebra](./src/KleeneAlgebra.lhs)
   is another auxiliary file that contains the Kleene algebra type class and some common instances.
+* [DolanClosure](./src/DolanClosure.lhs)
+  is a file that contains the star closure implementation by Stephen Dolan from
+  the paper "Fun with Semirings" (ICFP 2013)
 
 Alternatively, you can view these files locally as `.lhs` files directly or as `.md` files
 
 * [FunctionalKleene](./src/FunctionalKleene.md)
 * [RandomMatrix](./src/RandomMatrix.md)
 * [KleeneAlgebra](./src/KleeneAlgebra.md)
+* [DolanClosure](./src/DolanClosure.md)
 
 All files are located in the `/src` folder.
