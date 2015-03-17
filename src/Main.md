@@ -9,7 +9,7 @@ import DolanClosure       ( Matrix ( .. ), kleeneClosureBlock, starClosureBlock 
 import FunctionalKleene   ( fromAssociations, kleeneClosure, kleeneClosureArray, kleeneClosureLeft,
                             Row ( .. ), Mat ( .. ), ArrayMat ( .. ) )
 import RandomMatrix       ( randomSquareMatLike, mkStdGen, MatLike )
-import KleeneAlgebra      ( Tropical ( .. ), KleeneAlgebra ( star ) )
+import KleeneAlgebra      ( Tropical ( .. ), Regular ( .. ), KleeneAlgebra ( star ) )
 ```
 
 Some instances of deepseq'able data.
@@ -34,6 +34,15 @@ instance NFData a => NFData (Tropical a) where
   rnf MinWeight  = ()
   rnf MaxWeight  = ()
   rnf (Weight w) = rnf w
+```
+
+``` {.haskell}
+instance NFData a => NFData (Regular a) where
+  rnf (Letter a)     = rnf a
+  rnf NoWord         = ()
+  rnf EmptyWord      = ()
+  rnf (Binary _ r s) = rnf r `seq` rnf s
+  rnf (Star r)       = rnf r
 ```
 
 ``` {.haskell}
@@ -62,7 +71,10 @@ criteria.
 message :: String
 message = unlines ["Required arguments:", "\tsize :: Int", "\tdensity :: Double",
                    "\trandomGenerator :: Int",
-                   "\ttype ::= t (tropical) | txb (pair of tropical and Boolean) | b (boolean)",
+                   "\ttype ::= t (tropical) "                       ++ 
+                            "| txb (pair of tropical and Boolean) " ++
+                            "| b (boolean) "                        ++
+                            "| r (regular expressions over lowercase letters)",
                    "\tfunction ::= left | right | array | block+ | block*"]
 ```
 
@@ -85,6 +97,7 @@ main =
          in case ty of
               "t"   -> mkFunction f (randomSquareMatLike gen size dens (MinWeight, MaxWeight)                 :: MatLike (Tropical Int))
               "txb" -> mkFunction f (randomSquareMatLike gen size dens ((MinWeight, False), (MaxWeight,True)) :: MatLike (Tropical Int, Bool))
+              "r"   -> mkFunction f (randomSquareMatLike gen size dens (Letter 'a', Letter 'z')               :: MatLike (Regular Char))
               _     -> mkFunction f (randomSquareMatLike gen size dens (True, True)                           :: MatLike Bool)
        _ -> putStr message
 ```
