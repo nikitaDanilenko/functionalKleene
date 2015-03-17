@@ -27,7 +27,7 @@ import Data.Maybe            ( mapMaybe )
 import System.Random         ( Random (..), RandomGen, StdGen, split, mkStdGen )
 import System.Random.Shuffle ( shuffle' )
 
-import KleeneAlgebra         ( Tropical ( .. ) )
+import KleeneAlgebra         ( Tropical ( .. ), Regular ( .. ) )
 ```
 
 Generation of random matrices
@@ -180,6 +180,25 @@ instance (Random a, Ord a, Enum a) => Random (Tropical a) where
     (pos, g') = randomR (fromEnum l, fromEnum u) g
 
   random = randomR (MinWeight, MaxWeight)
+```
+
+Our random instance for `Regular` creates only `Letter` values. While
+this is a greatly simplified approach, it is a convenient restriction,
+because in the case of applications to graphs, the edges are usually
+labelled with exactly such values and not composite ones (the value
+`NoWord` typically represents "no edge" rather than an edge with no
+label, similarly we omit the case of empty labels, which are represented
+by `EmptyWord`). Additionally, we obtain a simple uniform distribution
+when letter bounds are used.
+
+``` {.haskell}
+instance (Random a, Enum a) => Random (Regular a) where
+  randomR (Letter l, Letter u) g = (Letter pos, g') where
+    (pos, g') = randomR (l, u) g
+  randomR _ g = (Letter pos, g') where
+    (pos, g') = random g
+  
+  random = randomR (NoWord, EmptyWord)
 ```
 
 Auxiliary functions
