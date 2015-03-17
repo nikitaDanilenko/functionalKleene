@@ -29,6 +29,29 @@ class IdempotentSemiring k => KleeneAlgebra k where
    star :: k -> k
 ```
 
+``` {.haskell}
+class IdempotentSemiring k => KAT k where
+  sparseTests :: [k]
+  isSimple    :: k -> Bool
+  compute     :: k -> k
+```
+
+``` {.haskell}
+katStar :: KAT k_ => k_ -> k_
+katStar a = one .+. katPlus a
+```
+
+``` {.haskell}
+katPlus :: KAT k_ => k_ -> k_
+katPlus a = tau a sparseTests
+```
+
+``` {.haskell}
+tau :: KAT k_ => k_ -> [k_] -> k_
+tau a  []        = a
+tau a  (t : ts)  = x .*. katStar (t .*. x) where x = tau a ts
+```
+
 We require that the following laws are satisfied for all `a, b, c :: s`:
 
 -   `(.+.)` is associative, commutative, idempotent and has `zero` as
@@ -152,6 +175,113 @@ operation is again the function `const one`
 ``` {.haskell}
 instance (Ord w, Num w) => KleeneAlgebra (Tropical w) where
   star = const one
+```
+
+One particularly important idempotent semiring is the free semiring of
+regular expressions over an alphabet. First, we provide the necessary
+datatype.
+
+``` {.haskell}
+data Regular a = Letter a
+               | NoWord
+               | EmptyWord
+               | Binary BinOp (Regular a) (Regular a)
+               | Star (Regular a)
+```
+
+There are two binary constructors for regular expressions, namely the
+alternative (addition) and the composition (multiplication).
+
+``` {.haskell}
+data BinOp = Alternative | Composition
+```
+
+A simple `Show` instance for the binary operations on regular
+expressions.
+
+``` {.haskell}
+instance Show BinOp where
+  show Alternative = "|"
+  show Composition = "x"
+```
+
+We avoid unnecessary brackets by propagating the previously defined
+precedences of the operations.
+
+``` {.haskell}
+precedenceOf :: BinOp -> Int
+precedenceOf Alternative = 5
+precedenceOf Composition = 6
+```
+
+This auxiliary function is used to decide whether we need brackets
+around the regular expression.
+
+``` {.haskell}
+isComposite :: Regular a -> Bool
+isComposite NoWord     = False
+isComposite EmptyWord  = False
+isComposite (Letter _) = False
+isComposite _          = True
+```
+
+Constants which we use to show the constants and the star operation of
+the `Regular` datatype.
+
+``` {.haskell}
+noWordString, emptyWordString, starString :: ShowS
+noWordString    = showChar '_'
+emptyWordString = showChar '-'
+starString      = showChar '*'
+```
+
+We provide a `Show` instance for regular expressions that avoids
+unnecessary brackets. For instance, the associativity of the addition is
+reflected in the fact that `r .+. (s .+. t)` is displayed as
+`r | s | t`.
+
+``` {.haskell}
+instance Show a => Show (Regular a) where
+  showsPrec _ (Letter a)     = shows a
+  showsPrec _ NoWord         = noWordString
+  showsPrec _ EmptyWord      = emptyWordString
+  showsPrec p (Binary b r s) = showParen (p > p') 
+                                   (showsPrec p' r . shows b . showsPrec p' s)
+                                where p' = precedenceOf b
+  showsPrec p (Star r)       = showParen (isComposite r) (showsPrec p r) . starString
+```
+
+Regular expressions are a special type of semiring, namely the free
+semiring. However, one has to take into account that equality of regular
+expressions is actually symbol-wise equality and thus does not satisfy
+the required semiring laws. This is simply remedied by defining two
+regular expressions to be equal iff they describe the same language. In
+theory one can define a function `language :: Regular a -> Set [a]`
+(where `Set` is some sort of set representation) and then define an `Eq`
+instance for regular expressions. Unfortunately, this definition would
+not terminate as soon as the regular expression contained the star
+operation of a non-zero element. Since we don't require any of the
+algebraic rules in the implementation, we omit this definition.
+
+``` {.haskell}
+instance IdempotentSemiring (Regular a) where
+  zero  = NoWord
+  
+  isZero NoWord = True
+  isZero _      = False
+  
+  one   = EmptyWord
+  
+  isOne EmptyWord = True
+  isOne _         = False
+  
+  (.+.) = Binary Alternative
+  (.*.) = Binary Composition
+```
+
+``` {.haskell}
+instance KleeneAlgebra (Regular a) where
+  star = Star
 ```
 
 Given two idempotent semiring their direct product is an idempotent
