@@ -258,10 +258,17 @@ the required semiring laws. This is simply remedied by defining two
 regular expressions to be equal iff they describe the same language. In
 theory one can define a function `language :: Regular a -> Set [a]`
 (where `Set` is some sort of set representation) and then define an `Eq`
-instance for regular expressions. Unfortunately, this definition would
-not terminate as soon as the regular expression contained the star
-operation of a non-zero element. Since we don't require any of the
-algebraic rules in the implementation, we omit this definition.
+instance for regular expressions according to the above definition.
+Unfortunately, this definition would not terminate as soon as the
+regular expression contained the star operation of a non-zero and
+non-one element. Since we don't require any of the algebraic rules in
+the implementation, we omit this definition. Still, need to implement
+some algebraic rules concerning the constants to (greatly!) improve the
+performance in case of the Kleene closure computation of a matrix. In
+particular, we deal with recognising `star one = one` and
+`star zero = one` as well as the neutrality of `one` with respect to
+`(.*.)`, the neutrality of `zero` with respect to `(.+.)` and the
+annihilation property of `zero` with respect to `(.*.)`.
 
 ``` {.haskell}
 instance IdempotentSemiring (Regular a) where
@@ -275,13 +282,20 @@ instance IdempotentSemiring (Regular a) where
   isOne EmptyWord = True
   isOne _         = False
   
-  (.+.) = Binary Alternative
-  (.*.) = Binary Composition
+  NoWord .+. r      = r
+  r      .+. NoWord = r
+  r      .+. s      = Binary Alternative r s
+  
+  NoWord    .*. _         = NoWord
+  _         .*. NoWord    = NoWord
+  EmptyWord .*. r         = r
+  r         .*. EmptyWord = r
+  r         .*. s         = Binary Composition r s
 ```
 
 ``` {.haskell}
 instance KleeneAlgebra (Regular a) where
-  star = Star
+  star r         = Star r
 ```
 
 Given two idempotent semiring their direct product is an idempotent
