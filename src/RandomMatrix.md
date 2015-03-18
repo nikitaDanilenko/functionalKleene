@@ -27,7 +27,7 @@ import Data.Maybe            ( mapMaybe )
 import System.Random         ( Random (..), RandomGen, StdGen, split, mkStdGen )
 import System.Random.Shuffle ( shuffle' )
 
-import KleeneAlgebra         ( Tropical ( .. ), Regular ( .. ) )
+import KleeneAlgebra         ( Tropical, Regular ( .. ), Balance )
 ```
 
 Generation of random matrices
@@ -176,10 +176,8 @@ underlying `Int` representation to create a random value.
 
 ``` {.haskell}
 instance (Random a, Ord a, Enum a) => Random (Tropical a) where
-  randomR (l, u) g = (toEnum pos, g') where
-    (pos, g') = randomR (fromEnum l, fromEnum u) g
-
-  random = randomR (MinWeight, MaxWeight)
+  randomR = randomREnum
+  random  = randomBounded
 ```
 
 Our random instance for `Regular` creates only `Letter` values. While
@@ -199,6 +197,12 @@ instance (Random a, Enum a) => Random (Regular a) where
     (pos, g') = random g
   
   random = randomR (NoWord, EmptyWord)
+```
+
+``` {.haskell}
+instance Random Balance where
+  randomR = randomREnum
+  random  = randomBounded
 ```
 
 Auxiliary functions
@@ -271,4 +275,22 @@ For example,
 ``` {.haskell}
 toRow :: [Maybe a] -> [(Int, a)]
 toRow = mapMaybe (uncurry (fmap . (,))) . zip [0 .. ]
+```
+
+This is a generic way to define the `random` function for bounded
+values. This implementation is the same as the one in `System.Random`.
+
+``` {.haskell}
+randomBounded :: (RandomGen g, Random a, Bounded a) => g -> (a, g)
+randomBounded = randomR (minBound, maxBound)
+```
+
+Similarly, the following function is a generic way to define the
+`randomR` function for types that are instances of `Enum` by falling
+back to the `Random` instance of `Int`.
+
+``` {.haskell}
+randomREnum :: (RandomGen g, Random a, Enum a) => (a, a) -> g -> (a, g)
+randomREnum (l, u) g = (toEnum x, g') where
+  (x, g') = randomR (fromEnum l, fromEnum u) g
 ```

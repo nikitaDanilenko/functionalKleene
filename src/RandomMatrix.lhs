@@ -25,7 +25,7 @@ is thus repeatable, which makes it very useful for testing.
 > import System.Random         ( Random (..), RandomGen, StdGen, split, mkStdGen )
 > import System.Random.Shuffle ( shuffle' )
 > 
-> import KleeneAlgebra         ( Tropical ( .. ), Regular ( .. ) )
+> import KleeneAlgebra         ( Tropical, Regular ( .. ), Balance )
 
 Generation of random matrices
 -----------------------------
@@ -150,10 +150,8 @@ We define a simple instance of `Random` for `Tropical` which uses the underlying
 to create a random value.
 
 > instance (Random a, Ord a, Enum a) => Random (Tropical a) where
->   randomR (l, u) g = (toEnum pos, g') where
->     (pos, g') = randomR (fromEnum l, fromEnum u) g
->
->   random = randomR (MinWeight, MaxWeight)
+>   randomR = randomREnum
+>   random  = randomBounded
 
 Our random instance for `Regular` creates only `Letter` values.
 While this is a greatly simplified approach, it is a convenient restriction, 
@@ -170,6 +168,10 @@ Additionally, we obtain a simple uniform distribution when letter bounds are use
 >     (pos, g') = random g
 >   
 >   random = randomR (NoWord, EmptyWord)
+
+> instance Random Balance where
+>   randomR = randomREnum
+>   random  = randomBounded
 
 Auxiliary functions
 -------------------
@@ -225,3 +227,16 @@ indexing the list and then removing the `Nothing` values. For example,
 
 > toRow :: [Maybe a] -> [(Int, a)]
 > toRow = mapMaybe (uncurry (fmap . (,))) . zip [0 .. ]
+
+This is a generic way to define the `random` function for bounded values. This implementation is the
+same as the one in `System.Random`.
+
+> randomBounded :: (RandomGen g, Random a, Bounded a) => g -> (a, g)
+> randomBounded = randomR (minBound, maxBound)
+
+Similarly, the following function is a generic way to define the `randomR` function for types that
+are instances of `Enum` by falling back to the `Random` instance of `Int`.
+
+> randomREnum :: (RandomGen g, Random a, Enum a) => (a, a) -> g -> (a, g)
+> randomREnum (l, u) g = (toEnum x, g') where
+>   (x, g') = randomR (fromEnum l, fromEnum u) g
