@@ -298,6 +298,87 @@ instance KleeneAlgebra (Regular a) where
   star r         = Star r
 ```
 
+The balance semiring (described in detail in: Vladimir Bagatelj,
+"Semirings for Social Network Analysis", Journal of Mathematical
+Sociology, pp. 53 -- 68) can be used to check the types of paths in a
+graph. A signed graph /(G = (V, E), sign)/ is a graph equipped with a
+function /sign : E -\> {P, N}/ where /P/ stands for /positive/ and /N/
+stands for /negative/. A walk in a graph is called positive (resp.
+negative) iff it contains an even (resp. odd) number of negative arcs. A
+semiwalk is a walk in the symmetric closure of the graph. A graph is
+called /balanced/ iff there is a partition of /V/ in two sets /A, B/
+such that for all edges /e/ we have \* / sign e == P / ==\> /e in A x A/
+or /e in B x B/ \* / sign e == N / ==\> /e in A x B/ or /e in B x A/
+That is: every positive edge connects vertices of the same partition set
+and every negative edge connects vertices of different partition sets
+(cf. the above mentioned source for more detail). Balanced graphs can be
+characterised as follows: a graph is balanced iff every closed semiwalk
+is positive. This is where the balance semiring can be used. We define
+the possible values of a path as follows.
+
+``` {.haskell}
+data Balance = NoPath | Positive | Negative | Mixed
+  deriving ( Eq, Enum )
+```
+
+Here `NoPath` denotes that there is no path between two vertices,
+`Positive` means a positive path, `Negative` means a negative path and
+`Mixed` denotes a path that contains at least one positive and one
+negative edge.
+
+``` {.haskell}
+instance Show Balance where
+  show NoPath   = "0"
+  show Positive = "+"
+  show Negative = "-"
+  show Mixed    = "~"
+```
+
+We can define a semiring instance for `Balance`. The basic idea is to
+think about the composition of paths as multiplication and the
+alternative of paths as addition.
+
+``` {.haskell}
+instance IdempotentSemiring Balance where
+  zero = NoPath
+  
+  isZero NoPath = True
+  isZero _      = False
+  
+  one  = Positive
+  
+  isOne Positive = True
+  isOne _        = False
+  
+  NoPath .+. x      = x                  -- nothing or something is something
+  x      .+. NoPath = x                  -- something or nothing is something
+  Mixed  .+. _      = Mixed              -- if there are mixed paths, all choices are mixed
+  _      .+. Mixed  = Mixed              
+  x      .+. y      | x == y    = x      -- choose the first of two equal values
+                    | otherwise = Mixed  -- if two values are different, there are mixed choices
+   
+  NoPath .*. _      = NoPath
+  _      .*. NoPath = NoPath
+  Mixed  .*. _      = Mixed
+  _      .*. Mixed  = Mixed
+  x      .*. y      | x == y    = Positive 
+                    | otherwise = Negative
+```
+
+The star closure operation can be defined as follows:
+
+``` {.haskell}
+instance KleeneAlgebra Balance where
+  star NoPath = Positive
+  star Positive = Positive
+  star _        = Mixed
+```
+
+The star closures of `NoPath, Negative` and `Mixed` can be easily
+computed using the fixpoint equation `star x = one .+. x .*. star x`.
+The equation `star Positive = Positive` is true because of the geometric
+series representation of the star closure.
+
 Given two idempotent semiring their direct product is an idempotent
 semiring as well, where all operations and constants are taken
 component-wise.
