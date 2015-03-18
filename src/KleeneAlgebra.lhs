@@ -255,7 +255,7 @@ positive.
 This is where the balance semiring can be used. We define the possible values of a path as follows.
 
 > data Balance = NoPath | Positive | Negative | Mixed
->   deriving ( Eq, Enum )
+>   deriving ( Eq, Enum, Bounded )
 
 Here `NoPath` denotes that there is no path between two vertices, `Positive` means a positive path,
 `Negative` means a negative path and `Mixed` denotes a path that contains at least one positive and
