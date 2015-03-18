@@ -1,3 +1,5 @@
+> {-# Language BangPatterns #-}
+
 > module Main ( main ) where
 
 > import Control.DeepSeq    ( NFData ( .. ), deepseq )
@@ -6,7 +8,8 @@
 > import FunctionalKleene   ( fromAssociations, kleeneClosure, kleeneClosureArray, kleeneClosureLeft,
 >                             Row ( .. ), Mat ( .. ), ArrayMat ( .. ) )
 > import RandomMatrix       ( randomSquareMatLike, mkStdGen, MatLike )
-> import KleeneAlgebra      ( Tropical ( .. ), Regular ( .. ), KleeneAlgebra ( star ) )
+> import KleeneAlgebra      ( Tropical ( .. ), Regular ( .. ), Balance ( .. ),
+>                             KleeneAlgebra ( star ) )
 
 Some instances of deepseq'able data.
 
@@ -31,6 +34,9 @@ Some instances of deepseq'able data.
 >   rnf (Binary _ r s) = rnf r `seq` rnf s
 >   rnf (Star r)       = rnf r
 
+> instance NFData Balance where
+>   rnf !_ = ()
+
 > instance NFData a => NFData (Matrix a) where
 >   rnf (Matrix rs) = rnf rs
 >   rnf (Scalar s)  = rnf s
@@ -54,7 +60,8 @@ This message is displayed, if the input does not match the required criteria.
 >                    "\ttype ::= t (tropical) "                       ++ 
 >                             "| txb (pair of tropical and Boolean) " ++
 >                             "| b (boolean) "                        ++
->                             "| r (regular expressions over lowercase letters)",
+>                             "| r (regular expressions over lowercase letters) " ++
+>                             "| bal (balance semiring)",
 >                    "\tfunction ::= left | right | array | block+ | block*"]
 
 The (compiled!) main function expects a size, a density, a random generator, a type of Kleene algebra
@@ -75,6 +82,7 @@ called runTestsNew.sh
 >               "t"   -> mkFunction f (randomSquareMatLike gen size dens (MinWeight, MaxWeight)                 :: MatLike (Tropical Int))
 >               "txb" -> mkFunction f (randomSquareMatLike gen size dens ((MinWeight, False), (MaxWeight,True)) :: MatLike (Tropical Int, Bool))
 >               "r"   -> mkFunction f (randomSquareMatLike gen size dens (Letter 'a', Letter 'z')               :: MatLike (Regular Char))
+>               "bal" -> mkFunction f (randomSquareMatLike gen size dens (Positive, Negative)                   :: MatLike Balance
 >               _     -> mkFunction f (randomSquareMatLike gen size dens (True, True)                           :: MatLike Bool)
 >        _ -> putStr message
 
