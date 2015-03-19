@@ -3,8 +3,8 @@ module FunctionalKleene where
 ```
 
 ``` {.haskell}
-import Control.Arrow               ( second )
-import Data.Array                  ( Array, listArray, (!), bounds, range, elems )
+import Control.Arrow               ( first, second )
+import Data.Array                  ( Array, listArray, (!), bounds, range, elems, assocs )
 import Data.Function               ( on )
 import Data.List                   ( groupBy, sortBy, intercalate )
 import Data.Ord                    ( comparing )
@@ -70,6 +70,14 @@ filterRow :: (a -> Bool) -> Row a -> Row a
 filterRow p = Row . filter (p . snd) . unRow
 ```
 
+Using the above filter function we can easily remove all zero values
+from a row as follows.
+
+``` {.haskell}
+removeZeroes :: IdempotentSemiring s => Row s -> Row s
+removeZeroes = filterRow (not . isZero)
+```
+
 This function transforms an association list into an array by sorting
 the indices and taking the first occurrence of a value at an index.
 
@@ -98,7 +106,7 @@ a given scalar. This version does not contain any simplifications.
 
 ``` {.haskell}
 scale :: IdempotentSemiring s => s -> Row s -> Row s
-scale s = filterRow (not . isZero) . fmap (s .*.)
+scale s = removeZeroes . fmap (s .*.)
 ```
 
 A slightly more sophisticated scaling function, which checks the scalar
@@ -109,7 +117,7 @@ infixr 5 *>
 (*>) :: IdempotentSemiring s => s -> Row s -> Row s
 s *> row | isZero  s = emptyRow
          | isOne   s = row
-         | otherwise = filterRow (not . isZero) (fmap (s .*.) row)
+         | otherwise = removeZeroes (fmap (s .*.) row)
 ```
 
 This function computes the sum of two rows.
@@ -238,6 +246,7 @@ simple testing and debugging purposes.
 class Matrix m where
 
     fromAssociations :: KleeneAlgebra k => MatLike k -> m k
+    toAssociations   :: KleeneAlgebra k => m k -> MatLike k
 ```
 
 Clearly, both matrix versions from above are instances of this type
@@ -246,6 +255,7 @@ class.
 ``` {.haskell}
 instance Matrix Mat where
   fromAssociations = Mat . map (toRowFromList . snd)
+  toAssociations   = zip [0..] . map unRow . matrix
 ```
 
 ``` {.haskell}
@@ -254,6 +264,12 @@ instance Matrix ArrayMat where
     where toPosValues = concatMap (\(i, r) -> map (\(j, v) -> ((i, j), v)) r)
           bnds        = ((0, 0), (n-1, n-1))
           n           = length ascs
+  
+  toAssociations = map (second (filter (not . isZero . snd)))             -- remove zeroes in rows
+                 . map (\l@(((i, _), _) : _) -> (i, map (first snd) l ))  -- drop redundant indices
+                 . groupBy ((==) `on` (fst . fst))                        -- preprocess rows
+                 . assocs
+                 . unArrayMat
 
 fuseWith :: Eq a => b -> [(a, b)] -> [a] -> [b]
 fuseWith zero = fuse where
@@ -269,4 +285,7 @@ instance Matrix D.Matrix where
   fromAssociations [(_, [(_, x)])] = D.Scalar x
   fromAssociations rs = D.Matrix (map ((\l -> fuseWith zero l list ) . snd) rs)
     where list = map fst rs
+  
+  toAssociations (D.Scalar s)  = [(0, [(0, s)])]
+  toAssociations (D.Matrix rs) = zip [0..] (map (filter (not . isZero . snd) . zip [0..]) rs)
 ```

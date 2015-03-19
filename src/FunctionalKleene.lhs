@@ -1,7 +1,7 @@
 > module FunctionalKleene where
 
-> import Control.Arrow               ( second )
-> import Data.Array                  ( Array, listArray, (!), bounds, range, elems )
+> import Control.Arrow               ( first, second )
+> import Data.Array                  ( Array, listArray, (!), bounds, range, elems, assocs )
 > import Data.Function               ( on )
 > import Data.List                   ( groupBy, sortBy, intercalate )
 > import Data.Ord                    ( comparing )
@@ -50,6 +50,11 @@ To avoid manual unwrapping and wrapping back, we provide a filter function for r
 > filterRow :: (a -> Bool) -> Row a -> Row a
 > filterRow p = Row . filter (p . snd) . unRow
 
+Using the above filter function we can easily remove all zero values from a row as follows.
+
+> removeZeroes :: IdempotentSemiring s => Row s -> Row s
+> removeZeroes = filterRow (not . isZero)
+
 This function transforms an association list into an array by sorting the indices and taking the
 first occurrence of a value at an index.
 
@@ -73,7 +78,7 @@ A straightforward implementation of scalar multiplication of a row with a given 
 does not contain any simplifications.
 
 > scale :: IdempotentSemiring s => s -> Row s -> Row s
-> scale s = filterRow (not . isZero) . fmap (s .*.)
+> scale s = removeZeroes . fmap (s .*.)
 
 A slightly more sophisticated scaling function, which checks the scalar for being `zero` or `one`
 before actually mapping over the row. 
@@ -82,7 +87,7 @@ before actually mapping over the row.
 > (*>) :: IdempotentSemiring s => s -> Row s -> Row s
 > s *> row | isZero  s = emptyRow
 >          | isOne   s = row
->          | otherwise = filterRow (not . isZero) (fmap (s .*.) row)
+>          | otherwise = removeZeroes (fmap (s .*.) row)
 
 This function computes the sum of two rows.
 
@@ -178,17 +183,25 @@ debugging purposes.
 > class Matrix m where
 >
 >     fromAssociations :: KleeneAlgebra k => MatLike k -> m k
+>     toAssociations   :: KleeneAlgebra k => m k -> MatLike k
 
 Clearly, both matrix versions from above are instances of this type class.
 
 > instance Matrix Mat where
 >   fromAssociations = Mat . map (toRowFromList . snd)
+>   toAssociations   = zip [0..] . map unRow . matrix
 
 > instance Matrix ArrayMat where
 >   fromAssociations ascs = ArrayMat (listArray bnds (fuseWith zero (toPosValues ascs) (range bnds))) 
 >     where toPosValues = concatMap (\(i, r) -> map (\(j, v) -> ((i, j), v)) r)
 >           bnds        = ((0, 0), (n-1, n-1))
 >           n           = length ascs
+>   
+>   toAssociations = map (second (filter (not . isZero . snd)))             -- remove zeroes in rows
+>                  . map (\l@(((i, _), _) : _) -> (i, map (first snd) l ))  -- drop redundant indices
+>                  . groupBy ((==) `on` (fst . fst))                        -- preprocess rows
+>                  . assocs
+>                  . unArrayMat
 > 
 > fuseWith :: Eq a => b -> [(a, b)] -> [a] -> [b]
 > fuseWith zero = fuse where
@@ -202,3 +215,6 @@ The Dolan matrix representation is also an instance of `Matrix`
 >   fromAssociations [(_, [(_, x)])] = D.Scalar x
 >   fromAssociations rs = D.Matrix (map ((\l -> fuseWith zero l list ) . snd) rs)
 >     where list = map fst rs
+>   
+>   toAssociations (D.Scalar s)  = [(0, [(0, s)])]
+>   toAssociations (D.Matrix rs) = zip [0..] (map (filter (not . isZero . snd) . zip [0..]) rs)
