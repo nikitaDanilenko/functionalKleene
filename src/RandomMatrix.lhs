@@ -20,12 +20,14 @@ is thus repeatable, which makes it very useful for testing.
 >     Random
 >     ) where
 > 
+> import Control.Arrow         ( first )
+> 
 > import Data.Maybe            ( mapMaybe )
 > 
 > import System.Random         ( Random (..), RandomGen, StdGen, split, mkStdGen )
 > import System.Random.Shuffle ( shuffle' )
 > 
-> import KleeneAlgebra         ( Tropical, Regular ( .. ), Balance )
+> import KleeneAlgebra         ( Tropical ( .. ), Regular ( .. ), Balance )
 
 Generation of random matrices
 -----------------------------
@@ -146,12 +148,27 @@ sequence.
 >     (x, g')  = random g
 >     (y, g'') = random g'
 
-We define a simple instance of `Random` for `Tropical` which uses the underlying `Int` representation
-to create a random value.
+We define a simple instance of `Random` for `Tropical`.
+When both bounds are actual weights, we use the inner values to generate a random value and
+then wrap it in a `Weight` constructor.
+When the first bound is `MinWeight`, we interpret it as `toEnum 0` and use the latter as a lower
+bound, i.e. we identify `MinWeight == toEnum 0`. If none of the above applies, we ignore the bounds.
+This way you cannot generate a `MaxWeight` value.
 
 > instance (Random a, Ord a, Enum a) => Random (Tropical a) where
->   randomR = randomREnum
+>   randomR (Weight l,  Weight u)  = wrapWeight . randomR (l, u)
+>   randomR (MinWeight, Weight u)  = wrapWeight . randomR (toEnum 0, u)
+>   randomR (Weight _,  MaxWeight) = wrapWeight . random
+>   randomR (u, l)                 | u > l     = randomR (l, u)
+>                                  | otherwise = wrapWeight . random
 >   random  = randomBounded
+
+> wrapWeight :: (Enum a, Eq a) => a -> Tropical a
+> wrapWeight = first toWeight
+
+> toWeight :: (Enum a, Eq a) => a -> Tropical a
+> toWeight x | x == toEnum 0 = MinWeight
+>            | otherwise     = Weight x
 
 Our random instance for `Regular` creates only `Letter` values.
 While this is a greatly simplified approach, it is a convenient restriction, 
