@@ -99,21 +99,6 @@ allowed as weights.
 This condition is _not_ satisfied in case of the additive monoid of most numerical values, because
 adding negative numbers makes values smaller.
 
-Assuming the expansion property, we can define an `Enum` instance for `Tropical`. The `Int`
-representation uses `[-2, .., maxBound]`, where (-2) is mapped to `MinWeight`, `maxBound` is mapped
-to `MaxWeight` and every value in between is mapped to the predecessor of the given representation
-on the inner values.
-
-> instance Enum w => Enum (Tropical w) where
->   toEnum (-2) = MinWeight
->   toEnum x    | x > -2 && x < maxBound = Weight (toEnum (x + 1))
->               | x == maxBound          = MaxWeight
->               | otherwise              = error "Not a valid weight."
->   
->   fromEnum MinWeight  = -2
->   fromEnum MaxWeight  = maxBound
->   fromEnum (Weight w) = fromEnum w - 1
-
 Assuming the expansion property again, one can define an order on the tropical semiring.
 
 > instance (Ord w, Num w) => IdempotentSemiring (Tropical w) where
