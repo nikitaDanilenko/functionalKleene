@@ -192,7 +192,7 @@ instance (Random a, Ord a, Enum a) => Random (Tropical a) where
 ```
 
 ``` {.haskell}
-wrapWeight :: (Enum a, Eq a) => a -> Tropical a
+wrapWeight :: (Enum a, Eq a) => (a, x) -> (Tropical a, x)
 wrapWeight = first toWeight
 ```
 

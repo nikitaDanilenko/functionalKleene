@@ -163,7 +163,7 @@ This way you cannot generate a `MaxWeight` value.
 >                                  | otherwise = wrapWeight . random
 >   random  = randomBounded
 
-> wrapWeight :: (Enum a, Eq a) => a -> Tropical a
+> wrapWeight :: (Enum a, Eq a) => (a, x) -> (Tropical a, x)
 > wrapWeight = first toWeight
 
 > toWeight :: (Enum a, Eq a) => a -> Tropical a
