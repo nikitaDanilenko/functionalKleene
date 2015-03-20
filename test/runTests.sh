@@ -4,7 +4,7 @@ sizes=(0100 0250 0500 0750 1000)
 densities=( 0.001 0.01 0.025 0.05 0.1 )
 generators=(-1673289139 1483475230 -825569446)
 functions=( array left right block* block+ )
-types=( bal r b t txb )
+types=( bal b t txb r )
 SEP="-------------------------------------------------------------------------------"
 FILE=$1
 
