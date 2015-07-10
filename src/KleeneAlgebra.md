@@ -280,7 +280,7 @@ instance KleeneAlgebra (Regular a) where
   star r         = Star r
 ```
 
-The balance semiring (described in detail in: Vladimir Bagatelj,
+The balance semiring (described in detail in: Vladimir Batagelj,
 "Semirings for Social Network Analysis", Journal of Mathematical
 Sociology, pp. 53 -- 68) can be used to check the types of paths in a
 graph. A signed graph /(G = (V, E), sign)/ is a graph equipped with a
